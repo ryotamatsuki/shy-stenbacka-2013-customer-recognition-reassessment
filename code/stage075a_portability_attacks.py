@@ -55,6 +55,8 @@ def best_incumbent(q,z,H,masses):
         lambda X:-payoffs(float(X[0]),q,z,H,masses)[0],
         [(0.0,PRICE_HI)],seed=20260931,tol=1e-12,polish=True
     )
+    if not r.success or not np.isfinite(r.fun) or not np.isfinite(r.x[0]):
+        raise RuntimeError(f'incumbent best-response optimizer failed: {r.message}')
     return float(r.x[0]),float(-r.fun)
 
 def best_poacher(p,z,H,masses):
@@ -62,6 +64,8 @@ def best_poacher(p,z,H,masses):
         lambda X:-payoffs(p,float(X[0]),z,H,masses)[1],
         [(0.0,PRICE_HI)],seed=20260932,tol=1e-12,polish=True
     )
+    if not r.success or not np.isfinite(r.fun) or not np.isfinite(r.x[0]):
+        raise RuntimeError(f'poacher best-response optimizer failed: {r.message}')
     return float(r.x[0]),float(-r.fun)
 
 def continuous_refine(z,H,masses):
