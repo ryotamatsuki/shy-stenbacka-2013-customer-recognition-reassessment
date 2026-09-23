@@ -1,88 +1,94 @@
 # Stage 0 — Evidence Freeze
 
 ## Objective
-Convert the historical audit signal into a narrowly falsifiable, independently re-verifiable publication-development question without treating the upstream audit as proof.
+Establish a self-contained evidentiary base before any publication-facing corrected proposition is frozen.
 
-## Frozen repository/workflow inputs
-- Production input HEAD: `8c5994950b934dc8d6cf4c2a50be696488cb73af`.
-- Production branch: `research/stage-00-evidence-freeze`.
-- Canonical workflow: `ryotamatsuki/research-paper-workflow@63f11a50a13d9328213498a5a6576d00b9bceef7` (v2.4; current main verified 2026-09-23).
-- Historical audit branch: `ryotamatsuki/ozshypapers@final-cleanroom-theorem-audit-20260919`, branch HEAD `cbef3c56bf5b50e3db57a48671d3a9bef26a8f5b`.
-- Historical target audit: `audits/investment_customer_recognition_information_exchange_2013_final.md`.
-- Historical source record: `sources/investment_customer_recognition_information_exchange_2013_source_record.md`.
-- Historical clean-room code: `code/investment_customer_recognition_information_exchange_2013_cleanroom.py`.
+## Input
+- Production base: `8c5994950b934dc8d6cf4c2a50be696488cb73af`
+- Canonical workflow: `ryotamatsuki/research-paper-workflow@63f11a50a13d9328213498a5a6576d00b9bceef7` (v2.4)
+- Historical audit only as provenance/regression target:
+  - `ryotamatsuki/ozshypapers@final-cleanroom-theorem-audit-20260919`
+  - `audits/investment_customer_recognition_information_exchange_2013_final.md`
+  - `sources/investment_customer_recognition_information_exchange_2013_source_record.md`
+  - `code/investment_customer_recognition_information_exchange_2013_cleanroom.py`
 
-## Phenomenon versus proposed explanation
-Phenomenon: the paper's Stage-III price formulas are obtained on interior demand branches, while the primitive consumer problem is clipped at switching thresholds 0 and 1.
+## Bibliographic freeze
+Target:
+Oz Shy and Rune Stenbacka (2013), “Investment in Customer Recognition and Information Exchange,” *Information Economics and Policy* 25(2), 92–106.
 
-Candidate explanation to test: a common poaching-price control across heterogeneous valuation groups can cross a clipping kink and make an interior FOC profile fail global best-response optimality.
+- DOI: `10.1016/j.infoecopol.2013.03.002`
+- PII: `S0167624513000115`
+- ScienceDirect VOR record: https://www.sciencedirect.com/science/article/pii/S0167624513000115
+- Hanken institutional record: https://research.hanken.fi/en/publications/investment-in-customer-recognition-and-information-exchange/
+- Boston Fed predecessor page: https://www.bostonfed.org/publications/research-department-working-paper/2012/investment-in-customer-recognition-and-information-exchange.aspx
+- Boston Fed complete WP PDF: https://www.bostonfed.org/-/media/Documents/Workingpapers/PDF/economic/wp/wp2012/wp1204.pdf
 
-This explanation is a hypothesis until independently reconstructed from primitives.
+The Boston Fed page explicitly states that a revised version was published in *Information Economics and Policy* 25(2), 92–106 (2013).
 
-## Actors / decisions / frictions / outcomes
-- Firms A and B.
-- Stage I: share or not share customer information.
-- Stage II: invest or not invest in recognition, cost c.
-- Stage III: choose information-contingent incumbent/poaching prices.
-- Consumers: valuation types HH, HL, LH, LL and switching-cost draw s in [0,1].
-- Frictions: switching cost sigma*s and endogenous recognition/information sharing.
-- Outcomes: price equilibria, investment, information sharing, switching, profits, consumer surplus, and total welfare.
+## VOR gate
+On 2026-09-23 the ScienceDirect record and substantial introduction/metadata were reachable through public indexing, but direct access to the formal body still returned HTTP 403 when re-opened. No lawful equation-level VOR copy was located in the public routes checked so far. Hanken confirms the final bibliographic record but does not expose the mathematical body.
 
-## Research architecture candidates
-A. Minimal correction: Eq. (8) counterexample plus equality/multiplicity corrections.
-B. Continuation-game reassessment: solve the relevant clipped Stage-III price games, then rebuild Stage II and Stage I where pure continuation equilibria are available.
-C. General common-control theorem: abstract the kinked uniform-pricing mechanism.
+Therefore:
+- the complete 15 February 2012 Boston Fed WP is the mathematical source currently used for derivation;
+- no equation-level claim is yet attributed unqualifiedly to the VOR;
+- VOR/WP identity remains an explicit Stage-1 open item and blocks final publication-facing wording if unresolved.
 
-Initial choice: B. C is permitted only if it emerges naturally and survives theorem-absorption review; no journal-driven extension is authorized.
-
-## Falsifiable research question
-**When does the no-information price profile in Shy and Stenbacka (2013) solve the global clipped price game, and what do the resulting continuation-game qualifications imply for investment and information-sharing equilibria?**
-
-This wording deliberately does not assume a corrected pure branch exists above the failure threshold and does not presuppose a welfare reversal.
-
-## Source freeze status
-See `sources/SOURCE_MANIFEST.md`.
-
-- VOR bibliographic identity: VERIFIED.
-- Complete mathematical body directly inspected: Boston Fed WP 12-4 (15 February 2012).
-- VOR equation-by-equation identity: UNVERIFIED because the publisher formal body was not directly accessible.
-- Claim policy: equation-level statements remain working-paper-qualified until the VOR body is verified.
-- Historical upstream PDF SHA-256 is retained as provenance; it was not recomputed from raw bytes in this session.
+Historical upstream SHA-256 for the WP is `d2ca6b4959fd0b4436e8f35702f81086f564e064e1c962d05a6b987054ba7f16`. This hash is preserved as provenance; it has not yet been independently rehashed in this production environment.
 
 ## Independent discrepancy reproduction
-`code/stage01_cleanroom_reproduction.py` was written without importing the upstream audit. It reconstructs the four clipped poaching demands and verifies:
-- q0 = sigma/3;
-- q* = (2 sigma + Delta)/6 on the three-active-group branch;
-- gain = (3 Delta^2 + 12 Delta sigma - 4 sigma^2)/(36 sigma);
-- threshold z_c = (-6 + 4 sqrt(3))/3;
-- exact regression (sigma,Delta)=(25,8): q0=25/3, q*=29/3, gain=23/225.
+The production analysis restarted from the primitive clipped switching masses rather than importing the upstream branch result.
 
-The script also performs a separate exact rational direct-payoff calculation with clipping, not a second call to the symbolic expression.
+Normalize `sigma=1`, `z=Delta/sigma`, and define
+[
+F(x)=2\operatorname{clip}(x)+\operatorname{clip}(x+z)+\operatorname{clip}(x-z).
+]
+For a no-information incumbent/poacher price pair `(p,q)`, the segment payoffs are
+[
+u_I(p,q)=p[4-F(p-q)],\qquad u_P(q,p)=qF(p-q).
+]
 
-## Prior-disclosure search
-Fresh searches on 2026-09-23 covered:
+At the source profile `p=2/3, q=1/3`, the poacher has a competing three-active-group maximizer
+[
+q_H=(2+z)/6,
+]
+with gain
+[
+G(z)=\frac{3z^2+12z-4}{36}.
+]
+Hence the source profile ceases to be a global best response when
+[
+z>z_c=\frac{-6+4\sqrt3}{3}.
+]
+
+At `sigma=25, Delta=8` (`z=8/25`), the dimensioned gain is reproduced exactly as
+[
+25G(8/25)=23/225>0.
+]
+
+This was checked by a separate primitive clipped-demand evaluator as well as symbolic algebra.
+
+## Fresh prior-disclosure search
+Searches run on 2026-09-23 included:
 - exact title + erratum/corrigendum/correction/comment/reply;
-- DOI/PII + correction terms;
-- Boston Fed, ScienceDirect, Hanken, RePEc/IDEAS;
-- later customer-recognition / behavior-based price-discrimination literature.
+- DOI/PII + correction;
+- ScienceDirect, Boston Fed, Hanken, RePEc/IDEAS;
+- citing/customer-recognition/behavior-based-pricing routes;
+- application-neutral searches for mixed pricing with discrete customer types and uniform controls.
 
-No erratum, corrigendum, comment, reply, or author correction addressing Eq. (8), the equality correspondences, or Result 9 was located. This is a negative search result, not proof of nonexistence. Stage 2 must still perform broader forward/backward and structural-isomorphism review.
+No erratum, corrigendum, author correction, or paper explicitly identifying the present Eq. (8) kink failure was located. This is a negative search result, not proof of nonexistence.
 
-## Gate assessment
-- Exact source identity: PASS, with explicit WP/VOR qualification.
-- Independent central discrepancy: PASS.
-- Exact regression: PASS.
-- VOR publication attribution of the equation-level discrepancy: OPEN; claims remain source-version qualified.
-- Fresh prior-disclosure screen: PASS for Stage 0; deeper novelty audit deferred to Stage 2.
-- Research question: PASS.
+## Research question selected
+**When is the no-information price profile in Shy and Stenbacka globally optimal, what replaces it when the clipped price game loses a pure equilibrium, and how do the resulting continuation payoffs alter investment, information sharing, and welfare?**
 
-## Canonical verdict
-**GO TO AUDIT — SOURCE-VERSION QUALIFIED.**
+This is narrower and more falsifiable than presupposing a welfare reversal.
 
-The unresolved VOR body does not prevent analysis of the directly inspected working-paper model, because publication-facing wording is explicitly qualified. It remains a mandatory pre-submission blocker for any sentence asserting that the published VOR contains the same equation-level defect.
+## Verdict
+**CONDITIONAL GO — STAGE 0 CLOSED FOR INTERNAL RESEARCH.**
 
-## Output state
-Stage-0 artifacts were added after input HEAD `8c5994950b934dc8d6cf4c2a50be696488cb73af`. The last pre-report artifact commit is `139b106c23cba4a48832ec500cbe2772136a462c`; the Git commit containing this report is the Stage-0 closure record.
+Conditions carried forward:
+1. VOR equation-level comparison remains open.
+2. Publication-facing attribution must remain WP/VOR-qualified until that gate closes.
+3. The central task is the complete clipped Stage-III equilibrium, not the counterexample alone.
 
-## Stage-1 contract
-Reconstruct timing, information sets, thresholds, payoff functions, all relevant Stage-III displayed profiles, Tables 1–9/Results 1–10 dependencies, exact counterexample, and equality/SPE multiplicity from primitives. The historical audit may be used only as provenance/regression target.
+## Next-stage contract
+Stage 1 must complete source/result mapping and continue lawful VOR retrieval. Stage 4 mathematics may proceed in parallel, but Stage 8 freeze and any unqualified VOR correction claim remain blocked until the source-version issue is resolved or the final manuscript is explicitly scoped to the verified version.
