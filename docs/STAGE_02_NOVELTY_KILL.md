@@ -101,3 +101,21 @@ B. corrected continuation-game reassessment through Stage I and welfare;
 C. general common-control pricing theorem.
 
 The default should be B unless downstream effects collapse to a trivial qualification. C is permitted only if a natural general theorem emerges without changing the target model.
+
+
+## Formal closure record
+
+- Stage: 2 — Literature Frontier / Novelty Kill
+- Formal-closure input SHA: `6ecf40641db6d34c78ab505fbda1cc811c69116b`
+- Exact prior-correction search: PASS — no erratum/corrigendum/comment/reply or later source-specific correction located in the fresh search.
+- Application literature mapping: PASS.
+- Application-neutral canonical-form search: PASS.
+- Theorem-absorption test:
+  - mixed pricing with discrete/captive/switching demand: **known / absorbed**;
+  - segment exclusion under a common control: **known mechanism family**;
+  - exact source-specific globality threshold and downstream corrected backward induction: **not located as a direct prior theorem/correction**.
+- Rejected novelty claim: “mixed pricing exists” is not new and will not be used.
+- Maximum defensible novelty: source-specific global-equilibrium correction plus backward-induction reassessment.
+- Canonical verdict: **STAGE 2 CLOSED — GO, NOVELTY KILL SURVIVED.**
+- Re-kill obligation: Stage 6 must repeat the absorption search against the final theorem set.
+- Next-stage contract: Stage 3 must choose among minimal correction, full continuation-game reassessment, and general theory extension without prestige-driven scope expansion.
