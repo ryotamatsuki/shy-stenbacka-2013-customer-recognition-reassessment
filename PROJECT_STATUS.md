@@ -7,7 +7,7 @@ Oz Shy and Rune Stenbacka (2013), “Investment in Customer Recognition and Info
 \`research-paper-workflow@63f11a50a13d9328213498a5a6576d00b9bceef7\` — v2.4.
 
 ## Current routing
-**Stage 9 CLOSED — GO. Next gate: Stage 10 — Section-by-Section Paper Construction.**
+**Stage 10 CLOSED — GO. Next gate: Stage 11 — Full-Paper Hostile Referee / Robustness Gate.**
 
 ## Closed / routed stages
 - Stage 0: CLOSED — CONDITIONAL GO.
@@ -53,6 +53,6 @@ GitHub Actions run #71 (id \`35840067654\`):
 - proof-placeholder audit: SUCCESS.
 
 ## Next gate
-**Stage 10 — Section-by-Section Paper Construction.**
+**Stage 11 — Full-Paper Hostile Referee / Robustness Gate.**
 
 No merge to \`main\`. Draft PR #3 is verification-only and must remain unmerged during this mandate.
