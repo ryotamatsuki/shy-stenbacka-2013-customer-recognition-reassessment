@@ -179,3 +179,24 @@ Fallback ladder: **Review of Industrial Organization → Journal of Industry, Co
 Safety-net re-architecture only: **Economics Bulletin**.
 
 Next gate: **Stage 13 — Full-Paper Integration**.
+
+
+## Formal closure record
+
+- Stage: 12 — Journal Positioning
+- Closure date: 2026-09-23
+- Input: Stage-11 hostile-referee manuscript and Stage-7.5A contribution-robustness certificate.
+- Frozen research strength consumed: **MODEL-SPECIFIC correction/reassessment with substantive downstream consequences**.
+- Primary target selected: **Information Economics and Policy**.
+- Fallback ladder:
+  1. Review of Industrial Organization
+  2. Journal of Industry, Competition and Trade
+  3. Research in Economics
+- Safety-net re-architecture only: Economics Bulletin.
+- IEP requirements ledger: `submission/JOURNAL_REQUIREMENTS_IEP.md`.
+- Source-version risk: explicitly carried forward; no VOR-specific equation-error claim permitted without direct equation-level comparison.
+- Mixed-equilibrium scope: existence/global-best-response validity only; no unrestricted mixed-uniqueness claim.
+- Portability scope: MODEL-SPECIFIC; no generality rescue authorized.
+- Journal-policy customization authorized from Stage 13 onward only where it does not alter the Stage-8 theory freeze.
+- Canonical verdict: **STAGE 12 CLOSED — GO.**
+- Next gate: **Stage 13 — Full-Paper Integration**.
