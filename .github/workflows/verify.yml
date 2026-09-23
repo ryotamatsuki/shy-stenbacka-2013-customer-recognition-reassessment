@@ -27,6 +27,8 @@ jobs:
         run: python code/stage04a_primitive_evaluator.py
       - name: Stage 7 backward induction and welfare identities
         run: python code/stage07_backward_induction.py
+      - name: Stage 7 equilibrium correspondence audit
+        run: python code/stage07_equilibrium_correspondence_audit.py
       - name: Stage 7 independent primitive welfare evaluator
         run: python code/stage07_primitive_welfare.py
 
