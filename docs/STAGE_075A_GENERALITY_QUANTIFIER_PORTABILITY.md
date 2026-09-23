@@ -58,16 +58,25 @@ Canonical certificate: \`theorem_certificates/STAGE_075A_CONTRIBUTION_ROBUSTNESS
 ## Formal verification
 Canonical certificate: \`theorem_certificates/FORMAL_VERIFICATION_CERTIFICATE.md\`.
 
-The gate is **PENDING FORMAL BUILD EVIDENCE** until the pinned Lean project builds and the axiom/placeholder audit passes.
+The pinned Lean project has passed GitHub Actions run #71:
+- clean project build: PASS;
+- axiom audit: PASS;
+- placeholder audit: PASS.
+
+Formal coverage remains **PROOF-CRITICAL CORE** only.
 
 ## Current verdict
-**CONDITIONAL GO — exactly one blocker: formal verification build/axiom evidence.**
 
-No mathematical or portability blocker remains at the certified narrow scope.
+**GO — GENERALITY / QUANTIFIER / PORTABILITY CERTIFICATION PASS.**
+
+- contribution robustness certificate: COMPLETE;
+- two pre-specified portability attacks: COMPLETE;
+- stop rule: TRIGGERED, with headline claims classified MODEL-SPECIFIC;
+- equilibrium and welfare quantifiers: FROZEN;
+- benchmark terminology: FROZEN;
+- formal verification gate: **FORMAL VERIFICATION PASS — PROOF-CRITICAL CORE**;
+- exact correctness blocker at Stage-7.5A scope: NONE.
 
 ## Routing
-Once the formal-verification certificate records a clean build and acceptable axiom/placeholder state, Stage 7.5A becomes:
 
-**GO — GENERALITY / QUANTIFIER / PORTABILITY CERTIFICATION PASS**
-
-and routes to Stage 8.
+**STAGE 7.5A CLOSED — GO. Route to Stage 8 — Canonical Theory Freeze.**
