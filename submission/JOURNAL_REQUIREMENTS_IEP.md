@@ -16,15 +16,15 @@ Primary target selected at Stage 12.
 | Submission portal | VERIFIED-CURRENT | Editorial Manager current IEP portal is live. |
 | Initial manuscript can be referee-readable PDF | LEGACY-OFFICIAL + CURRENT-SECONDARY | Legacy IEP Your Paper Your Way permits single PDF; current secondary template also treats flexible initial formatting. Stage 14 will use the conservative single-PDF package. |
 | Abstract | CURRENT-SECONDARY | Unstructured, up to 250 words. Current manuscript abstract is below 250 words. |
-| Keywords | LEGACY-OFFICIAL / CURRENT-SECONDARY | Conservative target: no more than 6 keywords. Add to manuscript/front matter at Stage 13. |
-| Highlights | LEGACY-OFFICIAL | Legacy IEP pack says mandatory: 3–5 bullets, max 85 characters each. Prepare a separate editable file at Stage 13; this is conservative even if current portal no longer requires it. |
+| Keywords | LEGACY-OFFICIAL / CURRENT-SECONDARY | Conservative target: no more than 6 keywords. **INTEGRATED:** six keywords added immediately after the abstract. |
+| Highlights | LEGACY-OFFICIAL | Legacy IEP pack says mandatory: 3–5 bullets, max 85 characters each. **INTEGRATED:** `submission/highlights.txt` contains four bullets, each <=85 characters. Current Elsevier guidance says highlights are not required until final files, but the conservative file is prepared. |
 | Reference style at first submission | LEGACY-OFFICIAL | Any consistent style acceptable; journal style later. Current natbib author-date style is consistent. |
 | Figures | NOT APPLICABLE | No manuscript figures. |
 | Tables | VERIFIED-IN-PACKAGE | Two editable/generated LaTeX tables embedded and cited. |
-| Competing interests | LEGACY-OFFICIAL / Elsevier policy | Add explicit “Declaration of competing interest: none.” |
-| Funding | Conservative submission completeness | Add explicit funding statement. |
-| Data availability | Conservative submission completeness | Theory/code paper: state no external data; code/reproducibility repository available. |
-| Generative-AI disclosure | VERIFIED-POLICY | Elsevier policy updated June 2026 requires separate disclosure for substantive AI use, naming tool/service, purpose, human review, and responsibility. |
+| Competing interests | LEGACY-OFFICIAL / Elsevier policy | **INTEGRATED:** explicit no-competing-interests statement in manuscript and submission ledger. |
+| Funding | Conservative submission completeness | **INTEGRATED:** no external funding statement in manuscript/title page/cover letter. |
+| Data availability | Conservative submission completeness | **INTEGRATED:** no external dataset statement plus public reproducibility-repository location. |
+| Generative-AI disclosure | VERIFIED-POLICY | **INTEGRATED:** separate declaration immediately before references identifies OpenAI ChatGPT, purposes, human review, and author responsibility. |
 | AI used in research/code | VERIFIED-POLICY | Elsevier says AI use in research/code development should be described in Methods/research-process section. Add transparent workflow paragraph in manuscript. |
 | AI authorship | VERIFIED-POLICY | AI cannot be author/coauthor. Only human author listed. |
 | LaTeX source | Elsevier generic + legacy IEP | Editable LaTeX available; initial PDF also reproducibly generated. |
@@ -32,7 +32,7 @@ Primary target selected at Stage 12.
 | Human/animal ethics | NOT APPLICABLE | Pure theory; no human/animal data. |
 | Source/version qualification | PROJECT-SPECIFIC MANDATORY | Equation claims tied to inspected 2012 predecessor model; VOR-specific error claim prohibited. |
 | Formal-verification scope | PROJECT-SPECIFIC MANDATORY | “proof-critical core” only; no whole-model claim. |
-| Cover letter | Submission-package requirement | Prepare at Stage 13 with source qualification and fit. |
+| Cover letter | Submission-package requirement | **INTEGRATED:** `submission/cover_letter.md` addresses source qualification, model-specific scope, contribution, and IEP fit. |
 | Suggested reviewers | PORTAL-DEPENDENT | Do not invent; leave for authenticated portal if requested. |
 | ORCID/contact/postal fields | PORTAL-DEPENDENT | Author must supply/confirm in authenticated portal; manuscript package need not invent missing metadata. |
 
@@ -45,3 +45,13 @@ Where a current public journal-specific guide is inaccessible, the submission pa
 4. current 2026 secondary journal-template corroboration.
 
 No unresolved item above changes scientific content. Authenticated-portal-only identity/contact/reviewer fields are not fabricated in the repository.
+
+
+## Stage-13 integration note
+
+Official Elsevier guidance checked again on 2026-09-23:
+- maximum six keywords after the abstract;
+- current generic highlights guidance: 3–5 bullets, <=85 characters each, not required until final files;
+- current June/August 2026 generative-AI policy: manuscript-preparation AI disclosure immediately before references; research/code AI use described in methodology/workflow; human review and responsibility required.
+
+Stage 14 will recheck any journal-specific portal requirements that are not publicly exposed.
