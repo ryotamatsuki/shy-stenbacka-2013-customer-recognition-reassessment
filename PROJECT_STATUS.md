@@ -7,7 +7,7 @@ Oz Shy and Rune Stenbacka (2013), “Investment in Customer Recognition and Info
 \`ryotamatsuki/research-paper-workflow@63f11a50a13d9328213498a5a6576d00b9bceef7\` — v2.4.
 
 ## Current routing
-**Stage 7 CLOSED — GO. Next gate: Stage 7.5 — Full-Theory Freeze Decision.**
+**Stage 7.5 CLOSED — GO. Stage 7.5A CONDITIONAL GO pending formal build/axiom evidence.**
 
 ## Closed stages
 - Stage 0 — Evidence Freeze: **CLOSED — CONDITIONAL GO**
@@ -136,3 +136,15 @@ Stage 7.5 cannot freeze theory; a GO routes to Stage 7.5A.
 
 ## Main-branch policy
 No merge to \`main\` has been performed or authorized.
+
+
+## Stage-7.5A portability state
+Two pre-specified attacks were re-solved:
+- Beta(2,2) switching-cost distribution;
+- unequal type masses (1,1.25,0.75,1).
+
+Both retain pure profiles at attacked high-z points where the baseline equal-mass/uniform-switching model has no pure equilibrium. Stop rule triggered. No generality rescue is authorized.
+
+## Formal gate state
+Draft verification PR: #3 (verification only; do not merge).
+Workflow run #67 is currently the evidence source for the formal-verification gate.
