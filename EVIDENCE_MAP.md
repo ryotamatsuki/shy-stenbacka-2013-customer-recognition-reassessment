@@ -1,24 +1,56 @@
 # Evidence Map
 
-## Target
-Oz Shy and Rune Stenbacka (2013), “Investment in Customer Recognition and Information Exchange,” Information Economics and Policy 25(2), 92–106.
+## Core mathematical correction
 
-## Transferred evidence to reproduce independently
-1. The no-information price profile Eq. (8) admits a profitable kink-crossing poaching-price deviation in an open admissible parameter wedge.
-2. The audit derives the gain `G(Δ,σ)=[3Δ²+12Δσ−4σ²]/(36σ)`, so the source profile fails when `Δ/σ>(−6+4sqrt(3))/3`, while Assumption 2 permits `Δ/σ<1/3`.
-3. At `σ=25, Δ=8`, the deviation from `q=25/3` to `q=29/3` yields exact gain `23/225>0`.
-4. Results 1, 2, and 8 also omit equality multiplicity; Result 9’s high-cost uniqueness statement is incomplete.
+| Object | Evidence |
+|---|---|
+| Pure \`UU\` correspondence | \`docs/STAGE_04_PRICE_GAME_CONSTRUCTION.md\`; \`derivations/stage04_active_set_certificate.md\`; \`code/stage04_global_price_certification.py\` |
+| Independent Stage-III attack | \`docs/STAGE_04A_ADVERSARIAL_CERTIFICATION.md\`; \`code/stage04a_primitive_evaluator.py\` |
+| Exact \`23/225\` counterexample | \`code/stage01_cleanroom_reproduction.py\`; Lean theorem \`exact_counterexample_gain\` |
+| Mixed continuation | Stage 4 construction + Stage 4A primitive global-BR audit |
+| Alternative mixed falsification | \`code/stage04a_mixed_alternative_search.py\`; diagnostic only, not uniqueness proof |
 
-## Required evidence classes before theorem freeze
-- Exact source/VOR page and equation mapping.
-- Independent algebraic derivation.
-- Feasible-set and equality/boundary audit.
-- Global unilateral-deviation check where the object is strategic.
-- Exact counterexample or exact sign/root certificate where applicable.
-- Downstream proposition/figure/table impact map.
-- Fresh erratum/comment/reply/prior-disclosure search.
-- Reproducibility script with permanent regression tests.
+## Backward induction and welfare
 
-## Status
-Transferred evidence: AVAILABLE.
-Independent reproduction in this repository: NOT STARTED.
+| Object | Evidence |
+|---|---|
+| Threshold identities | \`code/stage07_backward_induction.py\`; Lean \`corrected_threshold_gap\` |
+| Stage-II / Stage-I correspondence | \`code/stage07_equilibrium_correspondence_audit.py\`; \`derivations/stage07_equilibrium_welfare_certificate.md\` |
+| Consumer surplus | \`code/stage07_primitive_welfare.py\` direct utility integration |
+| Welfare identities | Stage 7 symbolic + primitive audit; Lean proof-critical identities |
+| Results 1–10 map | \`docs/STAGE_07_BACKWARD_INDUCTION_WELFARE.md\` |
+
+## Novelty and scope
+
+| Object | Evidence |
+|---|---|
+| Novelty re-kill | \`docs/STAGE_06_NOVELTY_REKILL.md\` |
+| Full-paper decision | \`docs/STAGE_075_FULL_THEORY_DECISION.md\` |
+| Portability falsification | \`code/stage075a_portability_attacks.py\`; \`derivations/stage075a_portability_falsification.md\` |
+| Contribution robustness | \`theorem_certificates/STAGE_075A_CONTRIBUTION_ROBUSTNESS.md\` |
+| Formal claim map | \`theorem_certificates/FORMAL_VERIFICATION_CERTIFICATE.md\` |
+| Canonical theory freeze | \`docs/STAGE_08_CANONICAL_THEORY_FREEZE.md\` |
+
+## Formal verification status
+
+GitHub Actions run #71:
+- mathematical regressions: PASS;
+- Lean build: PASS;
+- axiom audit: PASS;
+- placeholder audit: PASS.
+
+Formal coverage is restricted to the proof-critical algebraic core.
+
+## Source evidence
+
+Complete inspected source: Boston Fed WP 12-4.  
+VOR lineage/metadata: verified.  
+VOR equation-level body: **not directly verified**.
+
+## Current maturity
+
+Independent reproduction: COMPLETE.  
+Mathematical certification: COMPLETE at frozen scope.  
+Portability classification: COMPLETE.  
+Theory freeze: COMPLETE.  
+Manuscript/reproducibility stages: NEXT.
