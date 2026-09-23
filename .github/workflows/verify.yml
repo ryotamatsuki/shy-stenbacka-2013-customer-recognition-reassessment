@@ -1,0 +1,46 @@
+name: verify-reassessment
+
+on:
+  push:
+    branches:
+      - "research/**"
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  mathematical-regressions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install verification dependencies
+        run: python -m pip install --upgrade sympy numpy scipy
+      - name: Stage 1 exact reproduction
+        run: python code/stage01_cleanroom_reproduction.py
+      - name: Stage 4 symbolic construction
+        run: python code/stage04_no_information.py
+      - name: Stage 4A primitive evaluator
+        run: python code/stage04a_primitive_evaluator.py
+      - name: Stage 7 backward induction and welfare identities
+        run: python code/stage07_backward_induction.py
+
+  formal-verification:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build and kernel-audit Lean proofs
+        uses: leanprover/lean-action@v1
+        with:
+          build: true
+          axiom-audit: true
+          axiom-audit-root: SS2013Reassessment
+          nanoda: true
+          nanoda-allow-sorry: false
+      - name: Reject proof placeholders
+        run: |
+          if grep -R -nE '\b(sorry|admit)\b' formal --include='*.lean'; then
+            echo "Lean proof placeholder found"
+            exit 1
+          fi
