@@ -53,3 +53,17 @@ The high-`z` backward-induction results are initially stated **under the certifi
 **GO — ARCHITECTURE B.**
 
 Stage 5 is not invoked unless Stage 4A exposes exactly one repairable deficiency. No primitive/model extension is authorized.
+
+
+## Formal closure record
+
+- Stage: 3 — Candidate Paper Architecture
+- Formal-closure input SHA: `824161dc5f0f60edc1e4e0b6a2a65009d4a34dcc`
+- Architecture A — minimal correction: rejected as too narrow because it would leave the economically required backward induction unresolved.
+- Architecture B — corrected continuation-game reassessment: **selected**.
+- Architecture C — generic common-control theory extension: rejected at this stage as unnecessary scope expansion and potentially absorbed by established mixed-pricing families.
+- Working title retained: **Customer Recognition and Information Exchange with Kinked Price Competition: A Reassessment of Shy and Stenbacka (2013)**.
+- Scope rule: high-`z` downstream claims may rely only on a certified continuation and must state any equilibrium-selection qualifier explicitly.
+- Model-extension authority: none. Stage 5 is not automatically invoked.
+- Canonical verdict: **STAGE 3 CLOSED — GO, ARCHITECTURE B SELECTED.**
+- Next-stage contract: Stage 4 must solve the clipped Stage-III price games globally, with the no-information `UU` game as the priority object, and may not infer a corrected Nash equilibrium from a one-control counterexample.
