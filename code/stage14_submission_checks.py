@@ -72,10 +72,8 @@ for phrase in forbidden:
 
 # Reject affirmative scope inflation, while allowing explicit negations/disclaimers.
 inflated_patterns=[
-    r"we prove (?:that )?it is the unique mixed equilibrium",
-    r"is the unique mixed equilibrium\.",
-    r"we characterize the complete mixed-equilibrium correspondence",
-    r"the complete mixed-equilibrium correspondence is",
+    r"we (?:prove|establish|show|characterize) (?:that )?(?:it|this) is the unique mixed equilibrium",
+    r"we (?:prove|establish|derive|characterize) the complete mixed-equilibrium correspondence",
     r"we formally verify the (?:entire|whole|complete) economic model",
 ]
 for pat in inflated_patterns:
