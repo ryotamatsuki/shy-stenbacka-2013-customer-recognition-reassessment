@@ -1,0 +1,76 @@
+\appendix
+\section{Proof and verification details}\label{app:proofs}
+
+\subsection{Smooth active-set candidates}
+
+On a branch \(F_z(x)=ax+b\), differentiating \eqref{eq:segmentpayoffs} gives
+\[
+4-b-a(p-q)-ap=0,
+\qquad
+a(p-q)+b-aq=0.
+\]
+Solving yields \eqref{eq:smoothcandidate}.  Applying it to the five positive-slope branches produces the following candidate differences:
+\[
+\begin{array}{c|c}
+\text{branch} & x=p-q\\ \hline
+[-z,0] & 2(2-z)/3\\
+[0,z] & 2(2-z)/9\\
+[z,1-z] & 1/3\\
+[1-z,1] & 2(1+z)/9\\
+[1,1+z] & 2(z-1)/3.
+\end{array}
+\]
+For \(0<z<1/3\), the first lies above zero, the second lies above \(z\), the fourth lies below \(1-z\), and the fifth is negative.  Only \(x=1/3\) lies in its generating branch.
+
+At a kink, a mutual local optimum would require the relevant own-price derivative to change sign in the correct direction.  For the poacher,
+\[
+\partial_q u_P=F_z-qF_z',
+\]
+and the slope-increase kinks \(x=-z,0,z\) fail that condition.  For the incumbent,
+\[
+\partial_p u_I=4-F_z-pF_z',
+\]
+and the slope-decrease kinks \(x=1-z,1,1+z\) fail the corresponding condition.  Flat-demand boundaries and zero prices do not generate mutual best responses.  This gives the pure-candidate exhaustiveness used in Proposition~\ref{prop:pure}.
+
+\subsection{Selected mixed continuation}
+
+At \(p^*\) in \eqref{eq:mixedprices}, \(q_L\) lies on the four-active branch and \(q_H\) on the three-active branch.  Direct substitution gives
+\[
+q_L\,4(p^*-q_L)
+=
+q_H\,[3(p^*-q_H)+z],
+\]
+so the poacher is indifferent between the two atoms.  The probability \(\lambda(z)\) in \eqref{eq:lambda} is obtained by setting the incumbent's expected marginal payoff to zero at \(p^*\).  Branch-by-branch comparison shows that neither player can improve outside the displayed support.  The project repository contains a second implementation that evaluates primitive clipped switching masses and globally maximizes deviations numerically; it does not call the symbolic branch solver.
+
+\subsection{Backward-induction identities}
+
+Let \(A_S,B_S\) denote the investor and non-investor gross payoffs at a one-investor sharing history, and \(A_{NS},B_{NS}\) the analogous no-sharing payoffs.  The reconstructed continuation payoffs satisfy
+\[
+A_S-M=F-B_S=K_S,
+\]
+and
+\[
+A_{NS}-M=N-B_{NS}=K_{NS}.
+\]
+The investment gain is therefore independent of the rival's Stage-II action within each symmetric Stage-I history, which yields the complete equality correspondences in Proposition~\ref{prop:stage2}.
+
+For an asymmetric Stage-I history, the sharer's gain from investment is again \(K_S-k\) while the non-sharer's is \(K_{NS}-k\).  The identity
+\[
+K_{NS}-K_S=\frac{5z^2}{18}
+\]
+explains why the no-sharing side retains a strictly larger acquisition incentive throughout the maintained domain.
+
+\subsection{Verification architecture}
+
+The repository's regression suite includes:
+\begin{enumerate}
+\item an exact rational reproduction of the \(23/225\) deviation;
+\item a symbolic active-set certificate;
+\item an independent primitive-demand best-response evaluator;
+\item a diagnostic two-by-two support search for alternative mixed equilibria;
+\item a separate Stage-II/Stage-I correspondence audit;
+\item direct numerical integration of consumer utility and welfare;
+\item the two pre-specified portability falsification diagnostics; and
+\item a Lean 4/mathlib proof-critical algebraic certificate.
+\end{enumerate}
+The numerical diagnostics are used as falsification or reconstruction checks where stated; they are not relabeled as analytic proofs.
