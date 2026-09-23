@@ -61,3 +61,12 @@ The manuscript is ready for a full hostile-referee audit. Journal-specific forma
 - Canonical verdict: **STAGE 10 CLOSED — GO.**
 - Theory change: NONE.
 - Next gate: **Stage 11 — Full-Paper Hostile Referee / Robustness Gate.**
+
+
+## Stage-11 manuscript recertification
+
+The portability subsection was strengthened after Stage 11 detected that the earlier diagnostic evidence was grid-only. The revised prose now reports continuous best-response refinement and continuous unilateral regret.
+
+No headline theorem or manuscript quantifier was enlarged. The Stage-10 architecture and construction remain valid.
+
+**STAGE 10 REMAINS CLOSED — GO.**
