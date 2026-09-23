@@ -175,8 +175,39 @@ Stage 13 closure requires:
 - clean manuscript LaTeX/BibTeX build: SUCCESS;
 - unresolved citation/cross-reference check: SUCCESS.
 
-## Current verdict
+## CI / build evidence
 
-**PENDING CI — INTEGRATION COMPLETE, CLOSURE AWAITS GREEN BUILD.**
+Draft verification PR #6 on branch research/stage-13-integration:
 
-No substantive inconsistency has been found.
+- verify-reassessment run #169, id 35850225526:
+  - mathematical regressions: SUCCESS;
+  - continuous-BR portability regression: SUCCESS;
+  - deterministic table generation: SUCCESS;
+  - formal Lean build/kernel audit: SUCCESS;
+  - proof-placeholder rejection: SUCCESS.
+- manuscript-build run #8, id 35850225611:
+  - dependency setup: SUCCESS;
+  - deterministic table generation: SUCCESS;
+  - LaTeX/BibTeX manuscript build: SUCCESS;
+  - unresolved citation/reference rejection check: SUCCESS;
+  - PDF artifact upload: SUCCESS.
+
+## Formal closure record
+
+- Stage: 13 — Full-Paper Integration.
+- Closure date: 2026-09-23.
+- Primary target: Information Economics and Policy.
+- Stage-8 theory changed: NO.
+- Stage-7.5A claim scope changed: NO.
+- Journal-specific metadata/declarations integrated: YES.
+- Current related IEP literature integrated: YES.
+- Cover letter/highlights/title page/declarations package integrated: YES.
+- AI research-use and manuscript-preparation disclosure integrated: YES.
+- Table architecture reconciled with target journal: YES.
+- Formal-verification wording consistent with certificate: YES.
+- Source-version qualification consistent across manuscript and cover letter: YES.
+- Exact correctness blocker: NONE.
+- Canonical verdict: **STAGE 13 CLOSED — GO.**
+- Next gate: **Stage 14 — Submission QA.**
+
+No substantive inconsistency remains at the Stage-13 scope.
