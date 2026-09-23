@@ -204,9 +204,49 @@ These are the only admissible inputs to the corrected Stage-II reconstruction in
 - `code/stage01_cleanroom_reproduction.py`: exact counterexample regression.
 
 ## 9. Stage-4 verdict
-**CONDITIONAL GO — COMPLETE PURE CORRESPONDENCE + CERTIFIED SYMMETRIC MIXED CONTINUATION.**
+**GO — PRICE-GAME CONSTRUCTION CLOSED WITH EXPLICIT MIXED-SELECTION SCOPE.**
 
-The pure-strategy question is closed. The selected mixed continuation is valid and sufficient for a clearly quantified downstream reassessment. Full mixed-equilibrium uniqueness/completeness remains an explicit open theorem-scope item and therefore blocks any claim of a complete selection-free SPE correspondence in the high-`z` wedge.
+The pure-strategy question is closed. The selected symmetric semi-mixed continuation is fully constructed and is the only high-`z` continuation used by downstream construction-stage calculations. Stage 4 does not claim unrestricted mixed-equilibrium uniqueness. That distinct alternative-equilibrium/quantifier question is routed explicitly to Stage 4A and Stage 7.5A and therefore does not block Stage-4 construction closure.
 
 ## 10. Next-stage contract
-Stage 4A must attack the displayed mixed continuation without importing the Stage-4 branch labels. Stage 7 may reconstruct investment/sharing/welfare under the certified mixed continuation, but must retain the mixed-equilibrium-selection qualifier until uniqueness or selection robustness is proved.
+Stage 4A must attack the displayed mixed continuation without importing the Stage-4 branch labels, separately search for alternative mixed equilibria, and certify the exact quantifier permitted downstream. Stage 7 may reconstruct investment/sharing/welfare only under the selected continuation until Stage 4A/7.5A establish stronger selection robustness.
+
+
+## 11. Formal closure record
+
+- Stage: 4 — Minimal Model / Stage-III Price-Game Construction
+- Formal-closure input SHA: `2e8385f87d0b53bd7bee5fe4e5baea2512f61a70`
+- Canonical representation: `F_z(x)=2[x]_0^1+[x+z]_0^1+[x-z]_0^1`.
+- Active-set partition: COMPLETE.
+- Smooth-branch mutual candidates: EXHAUSTED.
+- Kink candidates: EXCLUDED analytically by one-sided derivative ordering.
+- Nonnegative price boundaries: CHECKED.
+- Source Eq. (8) pure equilibrium domain:
+  - unique pure equilibrium for `0<z<=z_c`;
+  - no pure equilibrium for `z_c<z<1/3`.
+- Exact threshold: `z_c=(-6+4sqrt(3))/3`.
+- Exact permanent regression: `(sigma,Delta)=(25,8)`, gain `23/225`.
+- High-`z` selected continuation: symmetric semi-mixed equilibrium constructed in closed form.
+- Mixed-equilibrium uniqueness: deliberately **not claimed**.
+- Related component certification:
+  - `TT`: globally constructed/certified;
+  - `TU`: globally constructed/certified;
+  - `UU`: corrected as above.
+- Equation map:
+  - (6)–(7): survives;
+  - (8): corrected;
+  - (9): inherits corrected `UU`;
+  - (10): survives;
+  - (11): inherits corrected `UU`;
+  - (17): survives.
+- Continuation payoff primitives required by Stage II: generated from the corrected Stage-III construction.
+- Supporting artifacts:
+  - `derivations/stage04_active_set_certificate.md`;
+  - `code/stage04_global_price_certification.py`;
+  - `code/stage04_no_information.py`;
+  - `code/stage01_cleanroom_reproduction.py`.
+- Independent recalculation on 2026-09-23 reconfirmed the branch identities, critical root, exact `23/225` gain, `TT/TU` vertices, and mixed-support indifference.
+- Rejected branch: no alternative pure kink-corrected equilibrium exists above `z_c`.
+- Canonical verdict: **STAGE 4 CLOSED — GO, PRICE-GAME CONSTRUCTION COMPLETE AT EXPLICIT SELECTED-CONTINUATION SCOPE.**
+- Open item routed forward: unrestricted mixed-equilibrium multiplicity/uniqueness and welfare-selection robustness.
+- Next-stage contract: Stage 4A must independently certify global best responses and separately attack alternative mixed equilibria; a failure there reopens Stage 4.
