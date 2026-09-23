@@ -95,6 +95,7 @@ def poachHighProfit (z : ℝ) : ℝ :=
 theorem mixed_support_indifference (z : ℝ) :
     poachLowProfit z = poachHighProfit z := by
   unfold poachLowProfit poachHighProfit qLow qHigh pStar
+  ring_nf
   nlinarith [sqrt_three_sq]
 
 def kShare (z : ℝ) : ℝ :=
@@ -152,15 +153,15 @@ theorem total_noShare_minus_share (L z k : ℝ) :
   unfold totalNoShare totalShare csNoShare csShare profitNoShare profitShare
   ring
 
-# print axioms critical_is_root
-# print axioms gain_numerator_factor
-# print axioms gain_positive_above_critical
-# print axioms exact_counterexample_gain
-# print axioms mixed_support_indifference
-# print axioms corrected_threshold_gap
-# print axioms noShare_minus_share_profit
-# print axioms cs_noShare_minus_share
-# print axioms total_noShare_minus_share
+#print axioms critical_is_root
+#print axioms gain_numerator_factor
+#print axioms gain_positive_above_critical
+#print axioms exact_counterexample_gain
+#print axioms mixed_support_indifference
+#print axioms corrected_threshold_gap
+#print axioms noShare_minus_share_profit
+#print axioms cs_noShare_minus_share
+#print axioms total_noShare_minus_share
 
 end
 end SS2013Reassessment
