@@ -7,7 +7,7 @@ Oz Shy and Rune Stenbacka (2013), “Investment in Customer Recognition and Info
 \`research-paper-workflow@63f11a50a13d9328213498a5a6576d00b9bceef7\` — v2.4.
 
 ## Current routing
-**Stage 12 CLOSED — GO. Next gate: Stage 13 — Full-Paper Integration.**
+**Stage 13 CLOSED — GO. Next gate: Stage 14 — Submission QA.**
 
 ## Closed / routed stages
 - Stage 0: CLOSED — CONDITIONAL GO.
@@ -53,7 +53,7 @@ GitHub Actions run #71 (id \`35840067654\`):
 - proof-placeholder audit: SUCCESS.
 
 ## Next gate
-**Stage 13 — Full-Paper Integration.**
+**Stage 14 — Submission QA.**
 
 No merge to \`main\`. Draft PR #5 is verification-only and must remain unmerged during this mandate.
 
@@ -66,4 +66,12 @@ No merge to \`main\`. Draft PR #5 is verification-only and must remain unmerged 
 - Stage 13 may customize presentation, declarations, cover letter, highlights, and submission metadata for IEP but may not alter Stage-8 frozen theory.
 
 ## Production branch
-`research/stage-12-positioning`
+`research/stage-13-integration`
+
+
+## Stage-13 integration freeze
+- Author metadata, keywords, declarations, AI disclosure, cover letter, highlights, and title page are integrated.
+- Current related IEP literature is incorporated without changing the novelty claim.
+- No theory or equilibrium quantifier changed after Stage 8.
+- All mathematical/formal/manuscript CI checks are green on the integrated package.
+- Stage 14 must perform fresh submission QA, current journal-rule recheck, and page-by-page PDF inspection before the project can be called submission ready.
