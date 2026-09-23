@@ -138,3 +138,22 @@ Stage 2 must perform a fresh novelty/prior-correction and structural-isomorphism
 ## 13. Output SHA record
 Input SHA: `d9953538a1e87e5ed794cfcbfbe3447e8c559b68`.  
 Pre-report artifact SHA: `139b106c23cba4a48832ec500cbe2772136a462c` is included in the branch history before the Stage-0 closure; this Stage-1 report's Git commit is the Stage-1 closure record and its successor Stage begins from that commit.
+
+
+## 14. Formal closure record
+
+- Stage: 1 — Source & Mathematical Audit
+- Formal-closure input SHA: `1d255c6826c1150b8153f27489ead15fb5f7a2c1`
+- Mathematical source: complete Boston Fed WP 12-4, dated 15 February 2012.
+- VOR identity: journal/volume/issue/pages/DOI/PII verified; equation-level formal body not directly inspected.
+- Primitive timing/strategy map: PASS.
+- Price-control information-set map: PASS.
+- Result/equation/table ledger: PASS.
+- Exact kink derivation: PASS.
+- Exact regression: `G(8,25)=23/225>0`.
+- Equality/multiplicity triggers: recorded for Stage 7 reconstruction.
+- Prior-disclosure status: no exact correction located in the fresh search; Stage 2 owns the novelty determination.
+- Rejected shortcut: transferring WP equation claims unqualifiedly to the VOR.
+- Canonical verdict: **STAGE 1 CLOSED — PASS, SOURCE-VERSION QUALIFIED.**
+- Carried blocker: VOR/WP equation-level comparison remains open and must remain explicit until resolved.
+- Next-stage contract: Stage 2 must test exact prior correction, application literature, application-neutral structural isomorphism, and theorem absorption.
