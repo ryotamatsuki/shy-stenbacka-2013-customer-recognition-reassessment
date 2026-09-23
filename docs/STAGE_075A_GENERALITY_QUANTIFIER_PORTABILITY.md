@@ -80,3 +80,14 @@ Formal coverage remains **PROOF-CRITICAL CORE** only.
 ## Routing
 
 **STAGE 7.5A CLOSED — GO. Route to Stage 8 — Canonical Theory Freeze.**
+
+
+## Stage-11 reopening and recertification
+
+Stage 11 detected that the original portability tests certified only grid regret. This was recorded as a certification regression and Stage 7.5A was reopened for the affected diagnostic evidence only.
+
+The repaired implementation performs continuous best-response refinement and continuous unilateral-regret checks. Both pre-specified alternatives continue to admit numerical pure best-response fixed points at the attacked high-`z` values, with continuous regret below (10^{-8}).
+
+**RECERTIFIED VERDICT: GO — GENERALITY / QUANTIFIER / PORTABILITY CERTIFICATION PASS.**
+
+The contribution classification, stop-rule decision, and theory-freeze scope are unchanged. No baseline theorem or formal theorem statement was modified.
