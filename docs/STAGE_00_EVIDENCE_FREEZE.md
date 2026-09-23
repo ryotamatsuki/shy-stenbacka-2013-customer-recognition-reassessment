@@ -92,3 +92,16 @@ Conditions carried forward:
 
 ## Next-stage contract
 Stage 1 must complete source/result mapping and continue lawful VOR retrieval. Stage 4 mathematics may proceed in parallel, but Stage 8 freeze and any unqualified VOR correction claim remain blocked until the source-version issue is resolved or the final manuscript is explicitly scoped to the verified version.
+
+
+## Formal closure record
+
+- Stage: 0 — Evidence Freeze
+- Input SHA: `8c5994950b934dc8d6cf4c2a50be696488cb73af`
+- Canonical workflow: `research-paper-workflow@63f11a50a13d9328213498a5a6576d00b9bceef7`
+- Files/evidence frozen: `README.md`, `PROVENANCE.md`, `CLAIM_BOUNDARY.md`, `EVIDENCE_MAP.md`, this report, and upstream audit/source references.
+- Independent tests: primitive clipped-demand reconstruction; exact `(sigma,Delta)=(25,8)` regression; fresh prior-disclosure search.
+- Rejected shortcut: treating the historical upstream audit as publication proof.
+- Unresolved issue carried forward: equation-level VOR/WP comparison.
+- Canonical verdict: **STAGE 0 CLOSED — CONDITIONAL GO (VOR attribution qualification carried forward).**
+- Next-stage contract: Stage 1 must complete the source/result ledger, timing/strategy map, mathematical dependency graph, and explicit WP/VOR claim boundary.
