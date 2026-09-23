@@ -23,7 +23,8 @@ Oz Shy and Rune Stenbacka (2013), “Investment in Customer Recognition and Info
 - Stage 4 — Clipped Stage-III Price-Game Construction: **CLOSED — GO**
   - closure commit: `ee7a065fcd675a3406f56501ba46cefd223df190`
 - Stage 4A — Independent Mathematical Adversarial Certification: **CLOSED — GO**
-  - closure commit: `6f14272b7629d7631cf155504eb0a7daf53ff6d9`
+  - canonical closure/revalidation commit: `a61da0f08566fd60bd1b1de7c4e54134e02a84c0`
+  - prior closure-record commit: `6f14272b7629d7631cf155504eb0a7daf53ff6d9`
   - verdict: `GO — MATHEMATICAL ADVERSARIAL CERTIFICATION PASS`
   - unrestricted mixed-equilibrium uniqueness is not claimed; high-`z` downstream claims must retain the certified selected-continuation qualifier.
 
@@ -97,3 +98,16 @@ Stage 6 must re-run exact-correction and theorem-absorption searches against the
 
 ## Main-branch policy
 No merge to `main` has been performed or authorized.
+
+
+## Stage-4A final revalidation
+Fresh independent execution before final closure reconfirmed:
+- `z_c = 0.3094010767585029`;
+- source-profile globality below the threshold and profitable poaching deviation above it;
+- selected mixed-continuation best-response residuals at numerical roundoff scale;
+- two-by-two-support alternative-mixed falsification search with no numerically distinct low-regret equilibrium found.
+
+These numerical searches are diagnostic where stated. The analytic active-set proof remains the certification basis for pure-equilibrium completeness, and unrestricted mixed uniqueness remains outside the certified claim.
+
+Canonical Stage-4A closure/revalidation commit:
+`a61da0f08566fd60bd1b1de7c4e54134e02a84c0`.
