@@ -242,7 +242,7 @@ For information acquisition:
 ## 11. Independent evidence
 - `code/stage07_backward_induction.py`: symbolic payoff/threshold/welfare identities.
 - `code/stage07_primitive_welfare.py`: independent direct utility integration over four valuation types and the switching-cost continuum, plus switching-count and total-welfare regression.
-- CI mathematical-regression job: PASS on Stage 1, Stage 4, Stage 4A, and Stage 7 symbolic programs; the new primitive-welfare regression is included in the next CI run.
+- `.github/workflows/verify.yml` now includes Stage 1, Stage 4, Stage 4A, the Stage-7 symbolic reconstruction, the independent equilibrium-correspondence audit, and the primitive-welfare evaluator. Connector-visible combined-status metadata does not by itself certify the push-triggered Actions run, so Stage-7 closure relies on the independently reproduced mathematical checks rather than an unverified CI-status claim.
 
 ## 12. Stage-7 verdict
 **GO — DOWNSTREAM REASSESSMENT CERTIFIED AND STAGE 7 CLOSED.**
@@ -376,6 +376,7 @@ Stage 10 should prefer at most a small number of high-information figures rather
 
 - Stage: 7 — Welfare / Generality / Institutional Validation
 - Closure date: 2026-09-23.
+- Closure input SHA: `b7ec41c5a614c3fabbc9aa5270a439e62452a8cc`.
 - Input: Stage 4/4A certified Stage-III continuations + Stage 6 novelty scope.
 - Stage-II backward induction: **PASS / COMPLETE AT CERTIFIED CONTINUATION SCOPE**.
 - Equality and multiplicity audit: **PASS**.
