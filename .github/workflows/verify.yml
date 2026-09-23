@@ -31,6 +31,8 @@ jobs:
         run: python code/stage07_equilibrium_correspondence_audit.py
       - name: Stage 7 independent primitive welfare evaluator
         run: python code/stage07_primitive_welfare.py
+      - name: Stage 7.5A portability falsification
+        run: python code/stage075a_portability_attacks.py
 
   formal-verification:
     runs-on: ubuntu-latest
