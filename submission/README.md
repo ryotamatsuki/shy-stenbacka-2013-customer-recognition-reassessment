@@ -1,3 +1,3 @@
-# Submission
+# Submission package
 
-Journal requirements, cover materials, declarations, portal records, and final submission freezes belong here. Empty until a journal route is approved.
+Stage 12 selects the journal. Stage 13 integrates journal-specific requirements. Stage 14 performs submission QA. No submission action or Stage 15 freeze is authorized in the current mandate.
