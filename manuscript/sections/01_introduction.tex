@@ -1,2 +1,31 @@
-\section{Introduction}
-Stage 10 manuscript construction pending.
+\section{Introduction}\label{sec:intro}
+
+Customer recognition changes price competition because information determines which prices a firm is able to condition on a customer's history or type. In a multi-stage model, an apparently small error in the terminal price game can therefore propagate backward into the incentives to acquire information, to share it with a rival, and ultimately into welfare comparisons. This paper documents such a propagation in the model developed by \citet{ShyStenbacka2012}, the complete working-paper predecessor of \citet{ShyStenbacka2013}.
+
+The issue is global rather than local. Under no customer information, a firm must use a common price across four valuation groups. With uniformly distributed switching costs, aggregate switching demand is continuous but kinked: a sufficiently large price change causes a customer group to enter or leave the switching set. The source profile satisfies the first-order conditions on the branch where all four groups are active. Those local conditions, however, do not rule out a finite deviation across a kink. We show that such a deviation becomes profitable inside the source paper's maintained parameter domain.
+
+Write \(z=\Delta/\sigma\), where \(\Delta\) measures the valuation mismatch between the two products and \(\sigma\) scales switching costs. The source restriction is \(0<z<1/3\). Define
+\[
+ z_c=\frac{-6+4\sqrt 3}{3}\simeq0.309401.
+\]
+For \(0<z\le z_c\), the normalized price pair \((p,q)=(2/3,1/3)\) is the unique pure equilibrium of each inherited-customer component. For \(z_c<z<1/3\), there is no pure equilibrium. The failure is not repaired by moving to another kink or another smooth active-set branch. A transparent exact witness is \((\sigma,\Delta)=(25,8)\): against the source incumbent price, raising the poaching price from \(25/3\) to \(29/3\) increases profit by exactly \(23/225\).
+
+For the pure-nonexistence interval we construct a symmetric continuation in which the incumbent price is pure and the poaching price mixes over two atoms. This construction is a Nash equilibrium and survives an independent global best-response audit. We do \emph{not} prove that it is the unique mixed equilibrium. Consequently, every downstream high-\(z\) statement in this paper is explicitly conditional on this certified two-point continuation. The pure correspondence and the counterexample themselves do not require that selection.
+
+Redoing the backward induction yields economically material changes. Under the corrected continuation, the private investment thresholds for the sharing and no-sharing regimes remain ordered but become piecewise functions of \(z\). As mismatch approaches the upper maintained boundary, the sharing-side acquisition threshold becomes negative first and the no-sharing threshold later becomes negative as well: recognition investment can cease to be privately attractive even at zero acquisition cost. The corrected Stage-I correspondence also makes explicit multiplicity at and above the no-sharing acquisition threshold.
+
+The correction does not move every welfare result in the same direction. Gross no-information profit crosses first the sharing-investment and then the no-sharing-investment benchmark in the high-\(z\) interval. Consumer surplus likewise exhibits two crossings, so the source-style consumer-surplus ranking is not global in the inspected model. By contrast, total welfare continues to satisfy
+\[
+ W(NI)>W(NS,I)>W(S,I)
+\]
+at the certified continuation. The exercise therefore separates three objects that can easily be conflated: equilibrium existence, private incentives, and the welfare ranking of fixed outcomes.
+
+The contribution is deliberately narrow. Mixed pricing with heterogeneous, captive, or incompletely informed consumers is well established; classic examples include \citet{Shilony1977}, \citet{Varian1980}, and \citet{Narasimhan1988}. In the customer-recognition literature, \citet{Esteves2010} explicitly analyzes mixed pricing with discrete consumer preferences, and \citet{deNijs2017} studies behavior-based price discrimination and customer-information sharing. We therefore do not claim novelty for mixed pricing as a phenomenon. The contribution here is the source-specific global-equilibrium correction and the backward-induction reassessment that follows from it.
+
+Nor do we claim broad portability. Before freezing the paper, we pre-specified two changes to assumptions that plausibly drive the baseline result: replacing uniform switching costs by a smooth Beta\((2,2)\) distribution, and perturbing the equal masses of the four valuation types. Re-solving those alternative price games numerically produced pure profiles at high-\(z\) points where the baseline game has no pure equilibrium. Under the project's pre-specified stop rule, the strong pure-nonexistence mechanism is therefore classified as model-specific. These negative robustness results are reported rather than redesigned away.
+
+The paper also separates evidence classes. The complete pure active-set argument is analytic. A separately written primitive-demand evaluator reconstructs best responses without calling the symbolic branch solver. Direct utility integration independently checks consumer surplus and welfare. A Lean 4/mathlib project verifies a proof-critical algebraic core---including the critical-root identity, the exact rational counterexample, mixed-support indifference, and selected threshold/welfare identities---but it does not formalize the full consumer model or equilibrium correspondence.
+
+Finally, the source scope is explicit. We directly inspected the complete Federal Reserve Bank of Boston working paper dated 15 February 2012 and verified the bibliographic lineage to the 2013 journal article. We did not obtain the equation-level version-of-record body for direct comparison. Accordingly, equation numbers and correction statements below refer to the inspected working-paper model; we do not assert that a specific published equation is identical until that comparison can be made.
+
+The rest of the paper proceeds as follows. Section~\ref{sec:source} records the source/version boundary. Section~\ref{sec:model} reconstructs the model and the information-dependent price controls. Section~\ref{sec:price} solves the clipped price game globally. Section~\ref{sec:backward} rebuilds investment and sharing incentives. Section~\ref{sec:welfare} studies switching, profit, consumer surplus, and total welfare. Section~\ref{sec:scope} reports the portability falsification and exact claim boundary. Section~\ref{sec:literature} positions the reassessment in the related literature.
