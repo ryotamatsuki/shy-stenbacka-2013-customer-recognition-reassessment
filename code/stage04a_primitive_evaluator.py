@@ -28,6 +28,8 @@ def primitive_segment_poacher_profit(q: float,p: float,z: float)->float:
 
 def argmax_1d(fun, hi=2.0):
     res=differential_evolution(lambda X:-fun(float(X[0])),[(0.0,hi)],seed=20260923,tol=1e-12,polish=True)
+    if not res.success or not np.isfinite(res.fun) or not np.isfinite(res.x[0]):
+        raise RuntimeError(f'best-response optimizer failed: {res.message}')
     return float(res.x[0]), float(-res.fun)
 
 def source_profile_test(z: float):
