@@ -55,3 +55,16 @@ No further result-driven redesign is authorized to rescue a general mechanism cl
 ## Stage 12 consumption rule
 
 Journal positioning must treat the paper as a **model-specific correction/reassessment with substantive downstream consequences**, not as a general theory contribution.
+
+
+## Stage-11 recertification
+
+The original portability artifact used grid regret only. Stage 11 correctly treated that evidence level as insufficient and reopened the Stage-7.5A diagnostic certificate.
+
+The repaired artifact `code/stage075a_portability_attacks.py` now:
+1. initializes from a dense grid;
+2. alternates continuous incumbent and poacher best responses;
+3. recomputes continuous unilateral regret;
+4. fails unless residual is below `1e-8`.
+
+Both pre-specified failures survive. The classification **MODEL-SPECIFIC** is recertified; no theory-freeze claim changes.
