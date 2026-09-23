@@ -332,3 +332,12 @@ Pure exposition edits that stay within this freeze do not reopen theory.
 **GO — CANONICAL THEORY FROZEN.**
 
 Next stage: **Stage 9 — Repository / Reproducibility Setup.**
+
+
+## Stage-11 recertification note
+
+Stage 11 reopened only the evidentiary strength of the Stage-7.5A portability diagnostics. The original grid-only implementation was insufficient to exclude off-grid deviations. The repaired implementation adds continuous best-response refinement and continuous unilateral-regret checks.
+
+Both pre-specified portability failures survive the stronger diagnostic. No baseline theorem, equilibrium quantifier, welfare formula, formal theorem, or claim classification changed.
+
+**STAGE-8 FREEZE REMAINS VALID — RECERTIFIED WITHOUT THEORY CHANGE.**
