@@ -16,6 +16,8 @@ jobs:
         run: python -m pip install --upgrade pip && python -m pip install -r requirements.txt
       - name: Generate deterministic tables
         run: python code/generate_tables.py
+      - name: Stage 14 submission consistency checks
+        run: python code/stage14_submission_checks.py
       - name: Build manuscript
         uses: xu-cheng/latex-action@v3
         with:
@@ -27,9 +29,25 @@ jobs:
             echo "Unresolved manuscript reference/citation"
             exit 1
           fi
+      - name: Build submission bundle
+        run: |
+          rm -rf submission_bundle
+          mkdir -p submission_bundle/manuscript/sections submission_bundle/manuscript/generated submission_bundle/submission
+          cp manuscript/main.pdf submission_bundle/manuscript/
+          cp manuscript/main.tex manuscript/references.bib submission_bundle/manuscript/
+          cp manuscript/sections/*.tex submission_bundle/manuscript/sections/
+          cp manuscript/generated/*.tex submission_bundle/manuscript/generated/
+          cp submission/title_page.md submission/cover_letter.md submission/highlights.txt submission/declarations.md submission_bundle/submission/
+          tar -czf iep_submission_bundle.tar.gz submission_bundle
       - name: Upload manuscript PDF
         uses: actions/upload-artifact@v4
         with:
           name: manuscript-pdf
           path: manuscript/main.pdf
+          if-no-files-found: error
+      - name: Upload submission bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: iep-submission-bundle
+          path: iep_submission_bundle.tar.gz
           if-no-files-found: error
