@@ -25,7 +25,7 @@ Primary target selected at Stage 12.
 | Funding | Conservative submission completeness | **INTEGRATED:** no external funding statement in manuscript/title page/cover letter. |
 | Data availability | Conservative submission completeness | **INTEGRATED:** no external dataset statement plus public reproducibility-repository location. |
 | Generative-AI disclosure | VERIFIED-POLICY | **INTEGRATED:** separate declaration immediately before references identifies OpenAI ChatGPT, purposes, human review, and author responsibility. |
-| AI used in research/code | VERIFIED-POLICY | Elsevier says AI use in research/code development should be described in Methods/research-process section. Add transparent workflow paragraph in manuscript. |
+| AI used in research/code | VERIFIED-POLICY | **INTEGRATED:** manuscript subsection documents AI-assisted literature/source triage, algebraic/code support, independent checks, and author control. |
 | AI authorship | VERIFIED-POLICY | AI cannot be author/coauthor. Only human author listed. |
 | LaTeX source | Elsevier generic + legacy IEP | Editable LaTeX available; initial PDF also reproducibly generated. |
 | Artwork resolution/accessibility | NOT APPLICABLE | No figures/artwork. |
@@ -34,7 +34,7 @@ Primary target selected at Stage 12.
 | Formal-verification scope | PROJECT-SPECIFIC MANDATORY | “proof-critical core” only; no whole-model claim. |
 | Cover letter | Submission-package requirement | **INTEGRATED:** `submission/cover_letter.md` addresses source qualification, model-specific scope, contribution, and IEP fit. |
 | Suggested reviewers | PORTAL-DEPENDENT | Do not invent; leave for authenticated portal if requested. |
-| ORCID/contact/postal fields | PORTAL-DEPENDENT | Author must supply/confirm in authenticated portal; manuscript package need not invent missing metadata. |
+| ORCID/contact/postal fields | PORTAL-DEPENDENT | **INTEGRATED IN PACKAGE:** title page contains prior-confirmed author metadata; authenticated portal entry still requires final author confirmation. |
 
 ## Stage-14 conservative rule
 
