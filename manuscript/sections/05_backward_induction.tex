@@ -1,2 +1,87 @@
-\section{Investment and information sharing}
-Stage 10 manuscript construction pending.
+\section{Investment and information sharing}\label{sec:backward}
+
+We now propagate the certified Stage-III payoffs backward.  Let
+\[
+k=\frac{c}{\sigma}
+\]
+denote normalized recognition cost.  For \(z\le z_c\), the no-information continuation remains the source pure profile.  For \(z>z_c\), this section uses Proposition~\ref{prop:mixed}.
+
+\subsection{Private acquisition thresholds}
+
+Let \(K_S(z)\) be the gross private gain from recognition when information is shared and \(K_{NS}(z)\) the corresponding gain when it is not shared.  On the low-\(z\) branch,
+\begin{equation}
+K_S(z)=\frac{2z^2}{9},
+\qquad
+K_{NS}(z)=\frac{z^2}{2},
+\qquad 0<z\le z_c.
+\label{eq:thresholdlow}
+\end{equation}
+On the selected high-\(z\) branch,
+\begin{equation}
+K_S(z)=
+\frac{(17+9\sqrt3)z^2-(30+18\sqrt3)z+16}{9},
+\label{eq:KS}
+\end{equation}
+and
+\begin{equation}
+K_{NS}(z)=
+\frac{(39+18\sqrt3)z^2-(60+36\sqrt3)z+32}{18}.
+\label{eq:KNS}
+\end{equation}
+The formulas meet continuously at \(z_c\), and
+\begin{equation}
+K_{NS}(z)-K_S(z)=\frac{5z^2}{18}>0.
+\label{eq:thresholdgap}
+\end{equation}
+The sharing threshold reaches zero at
+\[
+z_S^0\simeq0.314086968714,
+\]
+while the no-sharing threshold reaches zero later, at
+\[
+z_{NS}^0\simeq0.320424885817.
+\]
+Thus the correction changes not only the numerical cutoff but the topology of the acquisition regions: sufficiently near the upper mismatch boundary, information acquisition is privately unattractive even at zero cost.
+
+\begin{table}[t]
+\centering
+\caption{Key normalized thresholds and crossings}
+\label{tab:thresholds}
+\input{generated/key_thresholds.tex}
+\end{table}
+
+\subsection{Stage-II equilibrium correspondence}
+
+\begin{proposition}[Investment correspondence]\label{prop:stage2}
+Fix the Stage-I information-sharing choices and use the certified Stage-III continuation described above.
+\begin{enumerate}
+\item Under \((S,S)\), \((I,I)\) is the unique pure Stage-II equilibrium if \(k<K_S\), \((NI,NI)\) is unique if \(k>K_S\), and all four pure investment profiles are equilibria if \(k=K_S\).
+\item Under \((NS,NS)\), the analogous statements hold with \(K_{NS}\).
+\item Under an asymmetric Stage-I history \((S,NS)\), the sharer invests iff \(k<K_S\) and the non-sharer invests iff \(k<K_{NS}\).  At either equality the indifferent player's two actions both enter the pure correspondence.
+\end{enumerate}
+\end{proposition}
+
+The complete equality statement is important.  In each symmetric investment game the payoff gain from investing is the same whether the rival invests or not.  At the threshold both actions are therefore best replies in both columns, producing four rather than one or two pure Stage-II equilibria.
+
+Because \(K_{NS}>K_S\), asymmetric Stage-I histories contain an intermediate region in which only the non-sharer invests whenever both thresholds are positive.  That intermediate region changes or disappears as the corrected thresholds cross zero.
+
+\subsection{Stage-I sharing}
+
+Backward induction must account for the Stage-II multiplicity rather than silently choose one continuation.
+
+\begin{proposition}[Stage-I correspondence]\label{prop:stage1}
+Under the certified Stage-III continuation:
+\begin{enumerate}
+\item if \(K_{NS}(z)>0\) and \(0\le k<K_{NS}(z)\), \((NS,NS)\) is the unique Stage-I action profile compatible with subgame-perfect equilibrium;
+\item if \(k\ge K_{NS}(z)\), all four Stage-I sharing profiles are compatible with subgame-perfect equilibrium;
+\item if \(K_{NS}(z)\le0\), no recognition information is acquired for any feasible \(k\ge0\), and all four Stage-I sharing profiles are payoff irrelevant and compatible with subgame-perfect equilibrium.
+\end{enumerate}
+\end{proposition}
+
+The first statement includes the lower equality \(k=K_S\).  This case cannot be inferred from the strict regions because Stage-II continuation payoffs are then set-valued.  Reconstructing the possible continuations directly shows that a deviation to \(NS\) remains strictly profitable: on the low-\(z\) branch the least favorable deviation payoff exceeds the most favorable sharing payoff by \(z^2/18\), and on the selected high-\(z\) branch the analogous gain stays positive over the portion where \(K_S\ge0\).
+
+At \(k=K_{NS}\), by contrast, no-investment continuations can be supported after every Stage-I history.  Sharing labels then cease to affect realized payoffs, which supports all four Stage-I profiles.  This is why a uniqueness statement using a weak inequality at the upper threshold is not valid.
+
+\subsection{Implications for the source result map}
+
+The threshold correction and explicit boundary correspondences alter several source statements even before welfare is considered.  Results concerning the sharing and no-sharing investment cutoffs must use the piecewise thresholds above; cost-region classifications must allow one or both acquisition regions to disappear; asymmetric investment histories inherit the two thresholds; and the Stage-I uniqueness statement holds only in the strict region \(k<K_{NS}\).
