@@ -7,7 +7,7 @@ Oz Shy and Rune Stenbacka (2013), “Investment in Customer Recognition and Info
 \`ryotamatsuki/research-paper-workflow@63f11a50a13d9328213498a5a6576d00b9bceef7\` — v2.4.
 
 ## Current routing
-**Stage 7.5 CLOSED — GO. Stage 7.5A CONDITIONAL GO pending formal build/axiom evidence.**
+**Stage 7.5A CLOSED — GO. Next gate: Stage 8 — Canonical Theory Freeze.**
 
 ## Closed stages
 - Stage 0 — Evidence Freeze: **CLOSED — CONDITIONAL GO**
@@ -147,4 +147,12 @@ Both retain pure profiles at attacked high-z points where the baseline equal-mas
 
 ## Formal gate state
 Draft verification PR: #3 (verification only; do not merge).
-Workflow run #67 is currently the evidence source for the formal-verification gate.
+Canonical evidence: GitHub Actions run #71, run id 35840067654.
+- mathematical regressions: SUCCESS;
+- Lean clean build: SUCCESS;
+- axiom audit: SUCCESS, 58 declarations within [propext, Classical.choice, Quot.sound];
+- placeholder audit: SUCCESS.
+
+## Next gate
+**Stage 8 — Canonical Theory Freeze.**
+The freeze must preserve the model-specific portability classification, selected-continuation quantifier, proof-critical-only Lean coverage, and source-version qualification.
