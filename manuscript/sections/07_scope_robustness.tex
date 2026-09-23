@@ -14,13 +14,13 @@ D_P(q,p)=\sum_t H(p-q-d_t)
 \]
 after normalization and clipping at the support boundaries.
 
-A dense direct re-solution at \(z=0.31,0.32,0.33\) produces low-regret pure profiles at each point, including values near
+We first use a dense price grid only to initialize the search, then alternate continuous incumbent and poacher best responses and recompute continuous unilateral regret.  At \(z=0.31,0.32,0.33\) the search converges to profiles near
 \[
-(0.6413,0.2985),\quad
-(0.6503,0.3068),\quad
-(0.6593,0.3158),
+(0.64150,0.29847),\quad
+(0.64995,0.30678),\quad
+(0.65898,0.31565),
 \]
-respectively.  These numerical diagnostics are not existence proofs for the alternative game, but they are sufficient to falsify a proposed portability claim that the baseline high-\(z\) pure-nonexistence region automatically survives a smooth change in the switching-cost distribution.
+respectively, with continuous unilateral regret below \(10^{-8}\) at each point.  These diagnostics are not analytic existence proofs for the alternative game, but they directly rule out the concern that the original portability conclusion was an artifact of a coarse price grid.
 
 \subsection{Unequal type masses}
 
@@ -32,7 +32,13 @@ to
 \[
 (1,1.25,0.75,1).
 \]
-This perturbation breaks the exact symmetry between the two mismatch groups while preserving the same common-price institution.  Re-solving the game at the same high-\(z\) points again yields low-regret pure profiles.  Thus the strong pure-nonexistence conclusion is also sensitive to the equal-mass assumption.
+This perturbation breaks the exact symmetry between the two mismatch groups while preserving the same common-price institution.  Continuous best-response refinement at the same high-\(z\) points converges near
+\[
+(0.67958,0.32042),\quad
+(0.68000,0.32000),\quad
+(0.68042,0.31958),
+\]
+with continuous unilateral regret below \(10^{-8}\).  Thus the strong pure-nonexistence conclusion is also sensitive to the equal-mass assumption.
 
 Because two pre-specified, economically meaningful perturbations fail to preserve the strong mechanism, we stop rather than redesigning alternatives after seeing the results.  The paper's headline equilibrium correction is classified as \emph{model-specific}.  The weaker methodological point is more portable: when one control applies to heterogeneous segments, global deviations that cross segment-entry or exit boundaries must be checked explicitly.
 
