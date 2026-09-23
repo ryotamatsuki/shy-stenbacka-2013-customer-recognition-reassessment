@@ -56,3 +56,14 @@ GitHub Actions run #71 (id \`35840067654\`):
 **Stage 13 — Full-Paper Integration.**
 
 No merge to \`main\`. Draft PR #5 is verification-only and must remain unmerged during this mandate.
+
+
+## Stage-12 positioning freeze
+- Primary venue: **Information Economics and Policy**.
+- Contribution strength remains **MODEL-SPECIFIC reassessment**.
+- No VOR-specific equation-error attribution without direct equation-level comparison.
+- High-`z` downstream results remain selected-continuation qualified.
+- Stage 13 may customize presentation, declarations, cover letter, highlights, and submission metadata for IEP but may not alter Stage-8 frozen theory.
+
+## Production branch
+`research/stage-12-positioning`
