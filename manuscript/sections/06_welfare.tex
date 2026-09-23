@@ -1,2 +1,146 @@
-\section{Switching, profit, consumer surplus, and welfare}
-Stage 10 manuscript construction pending.
+\section{Switching, profit, consumer surplus, and welfare}\label{sec:welfare}
+
+The correction changes prices and hence private payoffs, but prices are transfers from the perspective of total welfare.  It is therefore useful to treat switching, profit, consumer surplus, and total welfare separately.
+
+\subsection{Switching}
+
+Let \(T^I\) denote the relevant switching mass for inherited/same-type comparisons and \(T^E\) the complementary cross-type switching measure used in the source accounting.  Direct reconstruction from primitive type-level demands yields, under the selected high-\(z\) continuation,
+\[
+T^I(S,I)>T^I(NS,I)>T^I(NI),
+\]
+and
+\[
+T^E(S,I)<T^E(NS,I)<T^E(NI).
+\]
+Thus the direction of the source switching comparison survives the price correction.
+
+\subsection{Industry profit}
+
+Normalized per-firm gross profits in the three symmetric outcomes are
+\begin{equation}
+F(z)=\frac{4(z^2+5)}9
+\label{eq:F}
+\end{equation}
+for investment with sharing,
+\begin{equation}
+N(z)=\frac{9z^2+40}{18}
+\label{eq:N}
+\end{equation}
+for investment without sharing, and \(M(z)\) from \eqref{eq:M} for corrected no information.
+
+The no-sharing investing outcome always has higher gross profit than the sharing investing outcome:
+\[
+N(z)-F(z)=\frac{z^2}{18}>0.
+\]
+The corrected no-information profit, however, crosses both benchmarks inside the mixed region:
+\[
+M=F
+\quad\text{at}\quad
+z\simeq0.315231824631,
+\]
+and
+\[
+M=N
+\quad\text{at}\quad
+z\simeq0.315991499774.
+\]
+Hence the gross-profit ranking is
+\[
+N>F>M
+\]
+below the first crossing,
+\[
+N>M>F
+\]
+between the crossings, and
+\[
+M>N>F
+\]
+above the second.  With recognition cost included, the corresponding investing outcome must additionally subtract \(k\).
+
+\subsection{Consumer surplus}
+
+Let \(L=v_L/\sigma\).  Direct integration of the consumer's maximum stay/switch utility over the switching-cost continuum gives, per inherited customer base,
+\begin{equation}
+CS_M=
+\frac{24L+z^2-20z-8\sqrt3 z}{6},
+\label{eq:CSM}
+\end{equation}
+\begin{equation}
+CS_{NS}=
+\frac{9z^2+72(2L+z)-88}{36},
+\label{eq:CSNS}
+\end{equation}
+and
+\begin{equation}
+CS_S=
+\frac{z^2+18(2L+z)-22}{9}.
+\label{eq:CSS}
+\end{equation}
+Irrespective of the no-information continuation,
+\[
+CS_{NS}-CS_S=\frac{5z^2}{36}>0.
+\]
+But \(CS_M\) crosses the two investing benchmarks:
+\[
+CS_M=CS_{NS}
+\quad\text{at}\quad
+z\simeq0.318731295698,
+\]
+and
+\[
+CS_M=CS_S
+\quad\text{at}\quad
+z\simeq0.320586070246.
+\]
+Consequently,
+\[
+CS_M>CS_{NS}>CS_S
+\]
+below the first crossing,
+\[
+CS_{NS}>CS_M>CS_S
+\]
+between the crossings, and
+\[
+CS_{NS}>CS_S>CS_M
+\]
+above the second.  The consumer-surplus ordering is therefore not global in the inspected baseline model.
+
+\subsection{Total welfare}
+
+Adding firm profit and consumer surplus makes prices cancel as transfers.  For the two investing outcomes,
+\begin{equation}
+W_{NS}-W_S=\frac{7z^2}{18}>0.
+\label{eq:welfareNSminusS}
+\end{equation}
+Under the selected mixed no-information continuation,
+\begin{equation}
+W_M-W_{NS}
+=
+\frac{
+36k+(3+12\sqrt3)z^2+(-72+24\sqrt3)z+8
+}{18}.
+\label{eq:welfareMminusNS}
+\end{equation}
+This expression is strictly positive for \(z_c<z<1/3\) and \(k\ge0\).  Combined with the original pure branch below \(z_c\), the outcome ranking
+\begin{equation}
+W(NI)>W(NS,I)>W(S,I)
+\label{eq:welfareorder}
+\end{equation}
+survives throughout the maintained baseline domain at the certified continuation.
+
+Equation~\eqref{eq:welfareorder} is an outcome comparison, not a statement that every outcome is an equilibrium in every parameter region.  Equilibrium welfare follows the corrected backward induction.  In particular, when \(K_{NS}>0\) and \(k<K_{NS}\), the privately selected no-sharing equilibrium invests even though the no-information outcome has higher total welfare.  The excessive-investment wedge therefore survives, but with the corrected private threshold.  Once \(K_{NS}\le0\), information acquisition disappears for every nonnegative cost and so does that wedge.
+
+\subsection{Disposition of the source results}
+
+Table~\ref{tab:resultsmap} summarizes what changes and what survives in the directly inspected source version.
+
+\begin{table}[t]
+\centering
+\caption{Frozen disposition of source Results 1--10}
+\label{tab:resultsmap}
+\input{generated/results_map.tex}
+\end{table}
+
+The qualitative lesson is not that the entire welfare analysis collapses.  Rather, correcting the terminal price game changes equilibrium existence and several private/consumer rankings while leaving the broad total-welfare ordering intact.
