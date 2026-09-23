@@ -9,12 +9,3 @@
 **Telephone:** +81-90-9552-5110  
 **ORCID:** 0009-0005-2329-531X  
 **Corresponding author:** Ryota Matsuki
-
-## Acknowledgments
-None.
-
-## Funding
-This research received no external funding.
-
-## Declaration of competing interest
-The author declares no competing interests.
