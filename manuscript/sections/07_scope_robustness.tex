@@ -48,6 +48,11 @@ The proof-critical algebraic core is formalized in Lean 4 with pinned mathlib de
 
 This coverage is intentionally limited.  The proof assistant does not encode the consumer-level clipping construction, active-set exhaustiveness, full game, unrestricted mixed-equilibrium correspondence, backward-induction game tree, or portability diagnostics.  Those claims rely on the separate analytic and independent computational certificates described above.  We therefore refer to the formalization as verification of a proof-critical core rather than formal verification of the entire economic model.
 
+
+\subsection{Research verification and AI-assisted workflow}
+
+Generative-AI assistance was used as a research-support tool rather than as an evidentiary source.  OpenAI ChatGPT supported literature discovery and source triage, algebraic cross-checking, development and review of Python/SymPy verification code, preparation and review of Lean proof scaffolding, and manuscript drafting and editing.  Every literature citation retained in the manuscript was checked against an external source rather than accepted from model output alone.  Mathematical claims were retained only after independent analytic derivation, executable regression checks, primitive-level numerical reconstruction where relevant, and targeted Lean verification for the proof-critical algebraic core.  Solver failures are configured to fail closed in the critical verification scripts.  The author determined the model interpretation, theorem scope, equilibrium quantifiers, robustness classification, and final wording, and assumes responsibility for all results.
+
 \subsection{Institutional bridge}
 
 The primitives have recognizable real-world counterparts even though the exact baseline parameterization is stylized.  The Federal Trade Commission documents large-scale collection, aggregation, profiling, and sale or sharing of consumer information by data brokers \citep{FTC2014DataBrokers}.  The UK Competition and Markets Authority examines how access to data can shape competitive advantage in digital advertising \citep{CMA2020Data}.  The European Commission's Digital Markets Act implementation of end-user data portability explicitly links data access to the ability to move between services without losing accumulated history \citep{EUDataPortability}.
