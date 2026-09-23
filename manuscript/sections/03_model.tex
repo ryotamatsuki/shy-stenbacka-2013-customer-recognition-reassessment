@@ -1,2 +1,74 @@
-\section{Model}
-Stage 10 manuscript construction pending.
+\section{Model}\label{sec:model}
+
+We retain the primitives and timing of the inspected model and normalize only where doing so simplifies the price analysis.
+
+\subsection{Consumers and switching}
+
+There are two firms, \(A\) and \(B\), and four valuation types \(t\in\{HH,HL,LH,LL\}\). Let
+\[
+\Delta=v_H-v_L>0.
+\]
+For a consumer inherited by firm \(A\), define \(d_t=v_A^t-v_B^t\). The four offsets are
+\[
+d_{HH}=d_{LL}=0,\qquad d_{HL}=\Delta,\qquad d_{LH}=-\Delta.
+\]
+A consumer who switches pays \(\sigma s\), where \(s\sim U[0,1]\) in the baseline model and \(\sigma>0\). If the incumbent charges \(p\) and the rival's poaching price is \(q\), an \(A\)-inherited type-\(t\) consumer switches when
+\[
+v_B^t-q-\sigma s>v_A^t-p.
+\]
+Thus the switching mass is
+\[
+s_t(p,q)=
+\left[\frac{p-q-d_t}{\sigma}\right]_0^1,
+\qquad
+[x]_0^1\equiv\min\{1,\max\{0,x\}\}.
+\]
+The clipping operator is part of the global demand correspondence; interior threshold formulas alone are not sufficient when a price deviation can cause a group to enter or leave demand. The analysis for consumers inherited by \(B\) is symmetric.
+
+The maintained parameter restriction in the source is
+\[
+\sigma>3\Delta,
+\qquad\text{equivalently}\qquad
+0<z\equiv\Delta/\sigma<1/3.
+\]
+
+\subsection{Timing and information}
+
+The game has three stages.
+
+\begin{enumerate}
+\item Each firm chooses whether to share customer information, \(S\) or \(NS\).
+\item Each firm chooses whether to invest in customer recognition, \(I\) or \(NI\), paying acquisition cost \(c\) if it invests.
+\item Firms choose incumbent and poaching prices subject to the information available after Stages I and II.
+\end{enumerate}
+
+It is useful to strip the application labels from the terminal price controls. For one inherited customer base, three control patterns appear in the source histories:
+\begin{itemize}
+\item \(TT\): both incumbent and poaching prices are type specific;
+\item \(UU\): both are uniform across the four valuation types;
+\item \(TU\): the incumbent price is type specific while the poaching price is uniform.
+\end{itemize}
+The source price profiles decompose as follows: full information uses \(TT+TT\); no information uses \(UU+UU\); one investor with sharing uses \(TT+UU\); both investors without sharing use \(TU+TU\); one investor without sharing uses \(TU+UU\); and the asymmetric sharing history with both firms investing uses \(TT+TU\).
+
+This decomposition isolates the issue. The global-equilibrium failure arises in \(UU\), where a common price couples customer groups. The \(TT\) and \(TU\) components are separately re-audited and remain globally valid over the maintained domain.
+
+\subsection{Normalization of the affected component}
+
+Set \(\sigma=1\) temporarily and write \(x=p-q\). Summing the four switching masses in a \(UU\) inherited base gives
+\[
+F_z(x)=2[x]_0^1+[x+z]_0^1+[x-z]_0^1.
+\]
+The incumbent and poacher profits from this base are
+\begin{equation}
+u_I(p,q)=p[4-F_z(p-q)],
+\qquad
+u_P(q,p)=qF_z(p-q).
+\label{eq:segmentpayoffs}
+\end{equation}
+The full no-information four-control game separates into two independent copies, \((p_A,q_B)\) and \((p_B,q_A)\). It is therefore sufficient to characterize the segment game globally.
+
+When we return to Stages I and II we normalize acquisition cost as
+\[
+k=c/\sigma.
+\]
+All reported thresholds can then be rescaled by \(\sigma\) if desired.
