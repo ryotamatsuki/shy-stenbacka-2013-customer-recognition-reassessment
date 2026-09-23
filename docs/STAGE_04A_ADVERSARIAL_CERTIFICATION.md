@@ -299,3 +299,38 @@ Permanent artifacts now include:
 - Exact correctness blocker remaining at Stage 4A scope: **NONE**.
 - Canonical verdict: **GO — MATHEMATICAL ADVERSARIAL CERTIFICATION PASS.**
 - Routing: proceed to **Stage 6 — Novelty Re-Kill**. Stage 5 is not invoked because Stage 4A found no diagnosed economic deficiency requiring a model modification.
+
+
+## Final closure revalidation — 2026-09-23
+
+A fresh independent execution of the primitive payoff logic was performed before treating this gate as formally closed.
+
+Revalidated numerical facts:
+- critical ratio: `z_c = 0.3094010767585029`;
+- for source-profile tests strictly below `z_c`, no positive incumbent or poacher gain was found beyond numerical tolerance;
+- immediately above `z_c`, the primitive poaching optimizer recovers a strictly positive deviation gain;
+- for the selected high-`z` mixed continuation, the largest incumbent best-response residual over the revalidation grid was approximately `1.18e-14`;
+- the largest poacher best-response residual was approximately `1.33e-15`;
+- support-payoff gaps were numerically zero at the tested points.
+
+The separate two-incumbent-atom/two-poacher-atom falsification search was also reproduced at `z=0.318,0.325,0.330`. Continuous exploitabilities were approximately:
+- `1.34e-7` at `z=0.318`;
+- `1.41e-6` at `z=0.325`;
+- `7.74e-7` at `z=0.330`.
+
+These solutions collapse close to the selected incumbent price and selected poaching support. This remains diagnostic falsification evidence only and is not promoted to a mixed-uniqueness theorem.
+
+GitHub combined-status metadata for the earlier closure commit did not expose a completed status check through the connector. This does not weaken Stage 4A because Lean/CI is not used as its closure evidence; the proof-assistant clean-build and axiom-audit gate remains explicitly assigned to Stage 7.5A.
+
+### Final gate decision
+- Candidate-deviation completeness at the certified scope: **PASS**.
+- Pure equilibrium-set completeness: **PASS**.
+- Selected mixed equilibrium existence/global best response: **PASS**.
+- Unrestricted mixed uniqueness: **OUTSIDE CLAIM; unresolved**.
+- Selection qualifier: **MANDATORY** for high-`z` downstream claims.
+- Stage 5 model repair: **NOT INVOKED**.
+- Stage-4A exact correctness blocker: **NONE**.
+
+**FINAL VERDICT: STAGE 4A FORMALLY CLOSED — GO.**
+
+The next canonical gate is **Stage 6 — Novelty Re-Kill**. Stage 5 is recorded as not invoked rather than silently skipped.
