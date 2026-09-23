@@ -1,2 +1,49 @@
-\section{Scope and diagnostic robustness}
-Stage 10 manuscript construction pending.
+\section{Scope and diagnostic robustness}\label{sec:scope}
+
+The results above are exact for the inspected baseline model, but exactness within one model is not evidence of portability.  Before freezing the contribution, we therefore pre-specified two perturbations of assumptions that plausibly drive the price-game result and re-solved the affected \(UU\) game rather than transporting the baseline formulas.
+
+\subsection{Non-uniform switching costs}
+
+The first diagnostic replaces the uniform switching-cost distribution by a Beta\((2,2)\) distribution on \([0,1]\), with CDF
+\[
+H(s)=3s^2-2s^3.
+\]
+The valuation offsets and common-price information constraint are retained.  The poaching demand becomes
+\[
+D_P(q,p)=\sum_t H(p-q-d_t)
+\]
+after normalization and clipping at the support boundaries.
+
+A dense direct re-solution at \(z=0.31,0.32,0.33\) produces low-regret pure profiles at each point, including values near
+\[
+(0.6413,0.2985),\quad
+(0.6503,0.3068),\quad
+(0.6593,0.3158),
+\]
+respectively.  These numerical diagnostics are not existence proofs for the alternative game, but they are sufficient to falsify a proposed portability claim that the baseline high-\(z\) pure-nonexistence region automatically survives a smooth change in the switching-cost distribution.
+
+\subsection{Unequal type masses}
+
+The second diagnostic retains uniform switching costs but changes the four normalized type masses from
+\[
+(1,1,1,1)
+\]
+to
+\[
+(1,1.25,0.75,1).
+\]
+This perturbation breaks the exact symmetry between the two mismatch groups while preserving the same common-price institution.  Re-solving the game at the same high-\(z\) points again yields low-regret pure profiles.  Thus the strong pure-nonexistence conclusion is also sensitive to the equal-mass assumption.
+
+Because two pre-specified, economically meaningful perturbations fail to preserve the strong mechanism, we stop rather than redesigning alternatives after seeing the results.  The paper's headline equilibrium correction is classified as \emph{model-specific}.  The weaker methodological point is more portable: when one control applies to heterogeneous segments, global deviations that cross segment-entry or exit boundaries must be checked explicitly.
+
+\subsection{Formal-verification boundary}
+
+The proof-critical algebraic core is formalized in Lean 4 with pinned mathlib dependencies.  The formal project verifies the critical-root identity, the factorization and sign of the kink-crossing gain, the exact \(23/225\) counterexample, mixed-support indifference, the corrected threshold gap, and selected profit, consumer-surplus, and welfare identities.  A clean GitHub Actions build and axiom audit pass with only the standard allowed axioms \(\{\texttt{propext},\texttt{Classical.choice},\texttt{Quot.sound}\}\), and no \texttt{sorry} or \texttt{admit} placeholders occur.
+
+This coverage is intentionally limited.  The proof assistant does not encode the consumer-level clipping construction, active-set exhaustiveness, full game, unrestricted mixed-equilibrium correspondence, backward-induction game tree, or portability diagnostics.  Those claims rely on the separate analytic and independent computational certificates described above.  We therefore refer to the formalization as verification of a proof-critical core rather than formal verification of the entire economic model.
+
+\subsection{Institutional bridge}
+
+The primitives have recognizable real-world counterparts even though the exact baseline parameterization is stylized.  The Federal Trade Commission documents large-scale collection, aggregation, profiling, and sale or sharing of consumer information by data brokers \citep{FTC2014DataBrokers}.  The UK Competition and Markets Authority examines how access to data can shape competitive advantage in digital advertising \citep{CMA2020Data}.  The European Commission's Digital Markets Act implementation of end-user data portability explicitly links data access to the ability to move between services without losing accumulated history \citep{EUDataPortability}.
+
+These materials support the relevance of customer-level information acquisition, information access, and switching frictions.  They do not establish the baseline four-type distribution, uniform switching costs, simultaneous price controls, or any welfare sign derived here.  We therefore make no causal policy claim from these institutional examples.
