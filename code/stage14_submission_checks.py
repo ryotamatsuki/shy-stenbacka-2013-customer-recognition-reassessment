@@ -64,14 +64,22 @@ forbidden=[
     "Stage 10 manuscript construction pending",
     "TODO",
     "FIXME",
-    "the unique mixed equilibrium",
-    "the complete mixed-equilibrium correspondence",
     "published Eq. (8) is wrong",
-    "whole-model formal verification",
 ]
 haystack=(all_tex+"\n"+cover).lower()
 for phrase in forbidden:
     assert phrase.lower() not in haystack, f"forbidden/stale phrase found: {phrase}"
+
+# Reject affirmative scope inflation, while allowing explicit negations/disclaimers.
+inflated_patterns=[
+    r"we prove (?:that )?it is the unique mixed equilibrium",
+    r"is the unique mixed equilibrium\.",
+    r"we characterize the complete mixed-equilibrium correspondence",
+    r"the complete mixed-equilibrium correspondence is",
+    r"we formally verify the (?:entire|whole|complete) economic model",
+]
+for pat in inflated_patterns:
+    assert not re.search(pat, haystack), f"scope-inflating phrase found: {pat}"
 
 # Mandatory scope phrases.
 assert "model-specific" in haystack
