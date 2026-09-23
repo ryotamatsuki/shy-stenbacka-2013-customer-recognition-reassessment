@@ -1,0 +1,6 @@
+Highlights
+
+• The no-information price game loses pure equilibrium above an exact threshold
+• A certified two-point mixed continuation repairs the high-mismatch price game
+• Corrected payoffs change customer-recognition investment and sharing incentives
+• Consumer-surplus rankings reverse while the total-welfare ordering survives
