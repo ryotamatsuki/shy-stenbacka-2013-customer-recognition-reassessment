@@ -21,6 +21,8 @@ jobs:
         run: python code/stage01_cleanroom_reproduction.py
       - name: Stage 4 symbolic construction
         run: python code/stage04_no_information.py
+      - name: Stage 4 active-set certificate
+        run: python code/stage04_global_price_certification.py
       - name: Stage 4A primitive evaluator
         run: python code/stage04a_primitive_evaluator.py
       - name: Stage 7 backward induction and welfare identities
