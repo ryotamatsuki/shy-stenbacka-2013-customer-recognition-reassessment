@@ -133,7 +133,7 @@ This portal-only preflight is the sole reason Stage 14 is CONDITIONAL PASS rathe
 No merge to `main` has been performed or authorized.
 
 ## Verification PR
-Draft PR #7 is verification-only and must remain unmerged; it may be closed after the administrative Stage-14 closure/status commits.
+Draft PR #7 was used for verification only and is now **closed unmerged**.
 
 ## Stage-15 policy
 **DO NOT perform Stage 15 or submit without explicit user authorization.**
