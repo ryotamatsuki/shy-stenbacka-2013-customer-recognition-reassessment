@@ -90,9 +90,16 @@ No manuscript claim exceeds the frozen boundaries:
 - no VOR-specific equation-error claim;
 - no whole-model formal-verification claim.
 
-## Stage-11 verdict
+## Stage-11 verification evidence
 
-Subject to the repaired regression suite passing on the current branch:
+Draft verification PR #5, head branch `research/stage-11-hostile-referee`:
+- verify-reassessment run #141, id `35843496415`: mathematical regressions **SUCCESS**;
+- Stage-7.5A continuous-BR portability falsification step: **SUCCESS**;
+- formal-verification job: **SUCCESS**;
+- proof-placeholder rejection: **SUCCESS**;
+- manuscript-build run #4, id `35843496489`: deterministic tables, LaTeX build, unresolved-citation/reference check, and PDF artifact upload all **SUCCESS**.
+
+## Stage-11 verdict
 
 **GO — NO UNRESOLVED FATAL OR MAJOR THEORY/MANUSCRIPT DEFECT.**
 
@@ -108,4 +115,5 @@ The only major certification regression discovered at this gate has been repaire
 - Stage-8 freeze recertified: YES.
 - Stage-10 manuscript recertified: YES.
 - Remaining issue for Stage 12: journal positioning under MODEL-SPECIFIC contribution and WP/VOR equation-level source qualification.
-- Next gate after CI pass: **Stage 12 — Journal Positioning**.
+- Canonical verdict: **STAGE 11 CLOSED — GO.**
+- Next gate: **Stage 12 — Journal Positioning**.
