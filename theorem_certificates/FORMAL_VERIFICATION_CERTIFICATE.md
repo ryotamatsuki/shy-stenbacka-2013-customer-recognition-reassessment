@@ -46,5 +46,20 @@ The formal source contains no \`sorry\` or \`admit\`. The workflow requires a cl
 - dependency lock: \`lake-manifest.json\`
 - project config: \`lakefile.lean\`
 
+## Build / axiom evidence
+
+GitHub Actions verification run #71, run id `35840067654`, formal job id `107112751294`, on commit `01d8f266b413518ae9bb719dd0bdba177adacfa4`:
+
+- `lake build`: **SUCCESS** — 8,940 jobs completed;
+- axiom-audit: **SUCCESS** — 58 declarations under `SS2013Reassessment` audited;
+- allowed axioms only: `propext`, `Classical.choice`, `Quot.sound`;
+- proof-placeholder grep for `sorry|admit`: **SUCCESS / none found**;
+- toolchain and mathlib revisions match the pinned files recorded above.
+
+One non-blocking linter warning reports that `simpa` could be simplified to `simp`; it has no proof-semantic consequence.
+
 ## Gate state
-Build/axiom audit evidence is required before the certificate becomes **FORMAL VERIFICATION PASS**.
+
+**FORMAL VERIFICATION PASS — PROOF-CRITICAL CORE.**
+
+This PASS certifies only the theorem map above. It does not enlarge formal coverage to unencoded economic primitives, case exhaustiveness, equilibrium uniqueness, or portability.
