@@ -4,7 +4,11 @@
 Oz Shy and Rune Stenbacka (2013), “Investment in Customer Recognition and Information Exchange,” *Information Economics and Policy* 25(2), 92–106.
 
 ## Canonical workflow
-`research-paper-workflow@63f11a50a13d9328213498a5a6576d00b9bceef7` — v2.4.
+`research-paper-workflow@46d17bc4c1036955103224a5c0358a70edd2cb90` — v2.5 for current exposition/submission work. Earlier scientific certifications remain pinned to their recorded commits.
+
+## v2.5 exposition retrofit
+
+`docs/EXPOSITION_STREAMLINING_V2_5_RETROFIT.md`: **PASS — no manuscript content change required**. Stage-14 conditional status is unchanged and remains portal-only.
 
 ## Current routing
 **STAGE 14 CLOSED — CONDITIONAL PASS — AUTHENTICATED PORTAL PREFLIGHT REQUIRED.**
